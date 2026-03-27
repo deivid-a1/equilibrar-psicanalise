@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+    font-family: 'Now';
+    src: url('../fonts/Now-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-branco: #FFFFFF;
+    --color-amarelo: #FEF217;
+    --color-roxo-apagado: #775C97;
+    --color-roxo: #4D3166;
+    --color-lilas: #A38DC4;
+    --color-azul-claro: #CEDFE9;
+    --color-bg-bege: #F4EBE1; 
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--color-bg-bege);
+    color: var(--color-roxo);
+}
+
+h1, h2, h3, h4, h5, h6, .font-now {
+    font-family: 'Now', sans-serif;
+}

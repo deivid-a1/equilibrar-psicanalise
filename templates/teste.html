@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrar Psicanálise | Apresentação Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            amarelo: '#FEF217',
+                            roxo_apagado: '#775C97',
+                            roxo: '#4D3166',
+                            lilas: '#A38DC4',
+                            azul_claro: '#CEDFE9',
+                            bege: '#F4EBE1'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: #F4EBE1;
+            color: #4D3166;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-now {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+    
+    <header class="fixed w-full z-50 bg-brand-bege/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-now font-bold text-2xl text-brand-roxo">Equilibrar Psicanálise</span>
+                </div>
+                <nav class="hidden md:flex space-x-8 font-now">
+                    <a href="#abordagem" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Abordagem</a>
+                    <a href="#sobre" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Sobre Mim</a>
+                    <a href="#servicos" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Serviços</a>
+                    <a href="#empresas" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Empresas</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="#contato" class="bg-brand-roxo text-white px-6 py-2 rounded-full font-now hover:bg-brand-amarelo hover:text-brand-roxo transition-colors duration-300 shadow">Agende sua sessão</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24">
+        <section class="min-h-screen flex items-center bg-gradient-to-b from-brand-bege to-brand-lilas/20 py-12 md:py-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2 order-2 md:order-1" data-aos="fade-right">
+                        <h1 class="text-5xl md:text-7xl font-now text-brand-roxo mb-6 leading-tight tracking-tight">Entender a si mesmo muda tudo.</h1>
+                        <p class="text-xl mb-10 leading-relaxed text-brand-roxo_apagado">Aqui na Equilibrar Psicanálise Clínica, unimos a profundidade da psicanálise com as evidências da neurociência para promover transformações reais. Descubra um novo caminho para o seu bem-estar emocional.</p>
+                        <a href="#contato" class="inline-block bg-brand-roxo text-white font-now px-8 py-4 rounded-full text-lg hover:bg-brand-amarelo hover:text-brand-roxo transition-colors duration-300 shadow-xl">Agende sua sessão</a>
+                    </div>
+                    <div class="w-full md:w-1/2 order-1 md:order-2" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Atendimento Psicanalítico" class="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3] transform hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abordagem" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-now text-brand-roxo mb-16 text-center" data-aos="fade-up">Minha abordagem: o encontro entre Psicanálise e Neurociência</h2>
+                <div class="flex flex-col md:flex-row items-center gap-16 mb-12">
+                    <div class="w-full md:w-1/2 flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-lg text-brand-roxo_apagado">Olá, eu sou <strong class="text-brand-roxo">Letícia Gomes de Carvalho, Psicanalista Clínica e Especialista em Neurociência aplicada à Performance Humana.</strong></p>
+                        <p class="text-lg text-brand-roxo_apagado">Entendo que o bem-estar real surge da integração profunda entre os processos mentais e os fundamentos biológicos. Utilizo a terapia psicanalítica para explorar o inconsciente, enquanto a neurociência fornece a base científica para compreender como seus obstáculos diários afetam seu sistema nervoso.</p>
+                        <p class="text-lg text-brand-roxo_apagado">Através desta visão holística, irei ajudar você a identificar padrões limitantes e a construir uma vida emocionalmente equilibrada e resiliente.</p>
+                    </div>
+                    <div class="w-full md:w-1/2" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Neurociência" class="rounded-3xl shadow-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-24 bg-brand-bege">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-16">
+                    <div class="w-full md:w-1/2" data-aos="fade-up">
+                        <h2 class="text-4xl font-now text-brand-roxo mb-8 relative inline-block">Minha história
+                            <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-lilas"></span>
+                        </h2>
+                        <div class="space-y-6 text-lg text-brand-roxo_apagado">
+                            <p>Sempre fui uma pessoa naturalmente acolhedora, mas foi a minha própria jornada de dor e autoconhecimento que revelou meu verdadeiro propósito: ajudar outras pessoas a compreender e transformar seus sofrimentos.</p>
+                            <p>Hoje, como psicanalista, ofereço um espaço seguro, humano e empático, atuando como parceira na sua jornada de autoconhecimento e cura emocional.</p>
+                            <p>Minha missão é mostrar que é possível transformar a dor em crescimento e encontrar sentido mesmo nos momentos mais difíceis.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="text-4xl font-now text-brand-roxo mb-8 relative inline-block">Sobre mim
+                            <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-lilas"></span>
+                        </h2>
+                        <div class="space-y-6 text-lg text-brand-roxo_apagado">
+                            <p>Atuo como Psicanalista Clínica e sou proprietária da Equilibrar Psicanálise (Registro SBPT 00352025).</p>
+                            <p>Minha base acadêmica inclui a graduação em Ciências Sociais pela UMESP, formação em Psicanálise Clínica pelo Instituto Universo de Psicanálise Clínica (IUPC-SP).</p>
+                            <p>Sou pós-graduada também em Psicanálise Clínica pelo IUPC-SP e pós-graduada em Neurociências pela PUC-PR.</p>
+                            <p>Atualmente, estou me especializando em Terapia Cognitivo Comportamental, Nerociência na Prática Clínica e Hipnose Terapêutica pelo Instituto Lucas Kane.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-20 bg-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-md" data-aos="zoom-in">
+                    <div class="w-full md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Livro Letícia Carvalho" class="rounded-2xl shadow w-full">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-3xl font-now text-brand-roxo mb-4">Autora Publicada</h3>
+                        <p class="text-lg mb-8 text-brand-roxo_apagado">Sou co-autora do livro "Por que você sempre deixa para depois?", da editora Livro, lançado em novembro de 2025.</p>
+                        <a href="#" onclick="event.preventDefault(); alert('Botão de demonstração.');" class="inline-block bg-brand-roxo text-white font-now px-8 py-3 rounded-full hover:bg-brand-amarelo hover:text-brand-roxo transition-colors duration-300 shadow">Adquira o livro AQUI!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-24 bg-brand-roxo text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="font-now uppercase tracking-widest text-xs md:text-sm font-bold bg-brand-lilas/20 text-brand-lilas px-6 py-2 rounded-full border border-brand-lilas/30">Tratamento Personalizado • Individual • Ciência • Acolhimento</span>
+                    <h2 class="text-4xl md:text-5xl font-now mt-10">Serviços Terapêuticos</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-2xl font-now mb-4 font-bold text-brand-amarelo">Plano Individualizado</h3>
+                        <p class="text-white/80 leading-relaxed">Desenvolvemos um plano terapêutico exclusivo, construído em conjunto com você.</p>
+                    </div>
+                    <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-2xl font-now mb-4 font-bold text-brand-amarelo">Cuidado Personalizado</h3>
+                        <p class="text-white/80 leading-relaxed">Focamos em suas necessidades específicas através de uma abordagem sob medida.</p>
+                    </div>
+                    <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-now mb-4 font-bold text-brand-amarelo">Processo Colaborativo</h3>
+                        <p class="text-white/80 leading-relaxed">Acreditamos que a terapia é uma parceria constante. Nosso diferencial é a adaptação total.</p>
+                    </div>
+                    <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-2xl font-now mb-4 font-bold text-brand-amarelo">Para Adolescentes</h3>
+                        <p class="text-white/80 leading-relaxed">Oferecemos um ambiente seguro para adolescentes a partir de 12 anos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="empresas" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-now text-brand-roxo mb-16 text-center" data-aos="fade-up">Serviços para Empresas</h2>
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="w-full md:w-1/2 space-y-6 text-lg text-brand-roxo_apagado" data-aos="fade-right">
+                        <p>Oferecemos soluções especializadas para o gerenciamento de riscos ocupacionais, garantindo que seu ambiente de trabalho atenda plenamente às exigências da Norma Regulamentadora 1 (NR1).</p>
+                        <p>Conte com nossa expertise para desenvolver e implementar programas eficazes de Saúde e Segurança do Trabalho (SST).</p>
+                    </div>
+                    <div class="w-full md:w-1/2" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Serviços para Empresas" class="rounded-3xl shadow-lg w-full object-cover aspect-[4/3]">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 80,
+            duration: 900,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+</body>
+</html>
