@@ -15,11 +15,13 @@
                     colors: {
                         brand: {
                             amarelo: '#FEF217',
+                            amarelo_claro: '#FFF580',
                             roxo_apagado: '#775C97',
                             roxo: '#4D3166',
                             lilas: '#A38DC4',
                             azul_claro: '#CEDFE9',
-                            bege: '#F4EBE1'
+                            bege: '#F4EBE1',
+                            branco: '#FFFFFF'
                         }
                     }
                 }
@@ -29,20 +31,24 @@
 </head>
 <body class="antialiased flex flex-col min-h-screen">
     
-    <header class="fixed w-full z-50 bg-brand-bege/95 backdrop-blur-sm shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="fixed w-full z-50 transition-all duration-300 border-t-[6px] border-brand-roxo shadow-sm">
+        <div class="absolute inset-0 bg-brand-bege/95 backdrop-blur-sm z-0"></div>
+        <img src="/static/img/onda_cabecalho.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60 z-0 pointer-events-none mix-blend-multiply">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex justify-between items-center h-24">
                 <div class="flex-shrink-0 flex items-center">
                     <img class="h-60 w-auto" src="/static/img/logo.webp" alt="Equilibrar Psicanálise">
                 </div>
                 <nav class="hidden md:flex space-x-8 font-now">
+                    <a href="#" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Início</a>
                     <a href="#abordagem" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Abordagem</a>
-                    <a href="#sobre" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Sobre Mim</a>
                     <a href="#servicos" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Serviços</a>
                     <a href="#empresas" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Empresas</a>
+                    <a href="#sobre" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">Sobre Mim</a>
                 </nav>
                 <div class="hidden md:flex items-center">
-                    <a href="#contato" class="bg-brand-roxo text-white px-6 py-2 rounded-full font-now hover:bg-brand-amarelo hover:text-brand-roxo transition-colors duration-300 shadow">Agende sua sessão</a>
+                    <a href="https://www.doctoralia.com.br/z/U4Phnv" target="_blank" class="bg-brand-roxo text-white px-6 py-2 rounded-full font-now hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow">Agende sua sessão</a>
                 </div>
             </div>
         </div>
