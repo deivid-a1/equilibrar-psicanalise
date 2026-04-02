@@ -159,7 +159,7 @@
 
             <p class="text-center mb-10 text-lg text-brand-roxo_apagado">Preencha o formulário abaixo e entraremos em contato.</p>
             
-            <form id="contactForm" class="space-y-6">
+            <form id="contactForm" class="space-y-6" novalidate>
                 <div>
                     <label for="nome" class="block text-sm font-medium text-brand-roxo font-now">Nome Completo</label>
                     <input type="text" id="nome" name="nome" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
@@ -171,7 +171,7 @@
                     </div>
                     <div>
                         <label for="telefone" class="block text-sm font-medium text-brand-roxo font-now">Telefone / WhatsApp</label>
-                        <input type="tel" id="telefone" name="telefone" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
+                        <input type="tel" id="telefone" name="telefone" required maxlength="15" placeholder="(11) 99999-9999" class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
                     </div>
                 </div>
                 <div>
@@ -188,6 +188,23 @@
 </section>
 
 <script>
+document.getElementById('telefone').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    
+    if (value.length > 11) {
+        value = value.slice(0, 11);
+    }
+    
+    if (value.length > 2) {
+        value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    }
+    if (value.length > 9) {
+        value = `${value.slice(0, 10)}-${value.slice(10)}`;
+    }
+    
+    e.target.value = value;
+});
+
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target;
@@ -195,10 +212,30 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const responseDiv = document.getElementById('formResponse');
     const submitBtn = form.querySelector('button[type="submit"]');
     
+    const emailValue = form.email.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    const phoneValue = form.telefone.value.replace(/\D/g, '');
+
+    responseDiv.className = 'hidden mt-6 text-center font-now p-4 rounded-xl border';
+
+    if (!emailRegex.test(emailValue)) {
+        responseDiv.classList.remove('hidden');
+        responseDiv.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
+        responseDiv.innerText = 'Por favor, insira um endereço de e-mail válido.';
+        return;
+    }
+
+    if (phoneValue.length < 10 || phoneValue.length > 11) {
+        responseDiv.classList.remove('hidden');
+        responseDiv.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
+        responseDiv.innerText = 'Por favor, insira um número de telefone válido com DDD.';
+        return;
+    }
+    
     submitBtn.disabled = true;
     submitBtn.innerHTML = 'Enviando aguarde...';
     submitBtn.classList.add('opacity-70');
-    responseDiv.className = 'hidden mt-6 text-center font-now p-4 rounded-xl border';
 
     try {
         const response = await fetch('/contato', {
