@@ -1,188 +1,259 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="min-h-screen flex items-center bg-gradient-to-b from-brand-bege to-brand-lilas/20 py-12 md:py-20 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="min-h-screen flex items-center bg-gradient-to-b from-brand-bege to-brand-lilas/20 py-24 md:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-now text-brand-roxo mb-12 leading-tight tracking-tight uppercase text-center" data-aos="fade-up">
+            COMPREENDER A SI MESMO É O CAMINHO PARA DEIXAR DE REPETIR O QUE TE FAZ SOFRER E TE IMPEDE DE AVANÇAR.
+        </h1>
+
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 order-2 md:order-1" data-aos="fade-right">
-                <h1 class="text-5xl md:text-7xl font-now text-brand-roxo mb-6 leading-tight tracking-tight">Entender a si mesmo muda tudo.</h1>
-                <p class="text-xl mb-10 leading-relaxed text-brand-roxo_apagado">Aqui na <strong class="text-brand-roxo">Equilibrar Psicanálise Clínica</strong>, unimos a profundidade da psicanálise com as evidências da neurociência para promover transformações reais. Descubra um novo caminho para o seu bem-estar emocional.</p>
-                <a href="https://www.doctoralia.com.br/z/U4Phnv" target="_blank" class="inline-block bg-brand-roxo text-white font-now px-8 py-4 rounded-full text-lg hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow-xl">Agende sua sessão</a>
+                <p class="text-xl mb-6 leading-relaxed text-brand-roxo_apagado">Na <strong class="text-brand-roxo">Equilibrar Psicanálise Clínica</strong>, uno a profundidade da psicanálise às evidências da neurociência para compreender e transformar padrões que impactam a forma como cada pessoa pensa, sente e se posiciona na vida — seja no adulto, no adolescente ou na criança.</p>
+                
+                <p class="text-lg mb-4 leading-relaxed text-brand-roxo_apagado font-bold">Para que a compreensão se transforme em mudança real, desenvolvi os Programas:</p>
+                
+                <ul class="space-y-4 mb-10 text-brand-roxo_apagado text-lg text-left">
+                    <li><strong class="text-brand-roxo">5C ℠ – Clareza & Direção:</strong> para quem busca entender e reorganizar a própria vida com mais consciência e direção. <a href="#tratamentos" class="text-brand-roxo underline hover:text-brand-lilas">(Saber mais)</a></li>
+                    <li><strong class="text-brand-roxo">O Profundo em Mim:</strong> para quem já iniciou o autoconhecimento, mas quer aprofundar e transformar. <a href="#tratamentos" class="text-brand-roxo underline hover:text-brand-lilas">(Saber mais)</a></li>
+                    <li><strong class="text-brand-roxo">Crescer sem Drama:</strong> para crianças e adolescentes que enfrentam dificuldades emocionais, comportamentais ou sociais. <a href="#tratamentos" class="text-brand-roxo underline hover:text-brand-lilas">(Saber mais)</a></li>
+                </ul>
             </div>
+            
             <div class="w-full md:w-1/2 order-1 md:order-2" data-aos="fade-left">
                 <img src="/static/img/leticia_hero.webp" alt="Atendimento Psicanalítico Letícia Carvalho" class="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3] transform hover:scale-[1.02] transition-transform duration-500">
             </div>
+        </div>
+
+        <div class="flex justify-center mt-12 w-full" data-aos="zoom-in">
+            <a href="https://www.doctoralia.com.br/z/U4Phnv" target="_blank" class="inline-block bg-brand-roxo text-white font-now px-12 py-5 rounded-full text-xl hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow-xl">Agende sua sessão</a>
         </div>
     </div>
 </section>
 
 <section id="abordagem" class="py-24 bg-brand-bege">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-now text-brand-roxo mb-16" data-aos="fade-up">Minha abordagem: o encontro entre Psicanálise e Neurociência</h2>
+        <h2 class="text-4xl md:text-5xl font-now text-brand-roxo mb-16 text-center" data-aos="fade-up">Abordagem - Psicanálise e Neurociência</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
             <img src="/static/img/leticia_blazer.webp" alt="Letícia Gomes de Carvalho" class="rounded-[2.5rem] shadow-sm w-full object-cover aspect-square">
             <img src="/static/img/cerebro_neuro.webp" alt="Integração Psicanálise e Neurociência" class="rounded-[2.5rem] shadow-sm w-full object-cover aspect-square">
         </div>
 
-        <div class="space-y-6 text-lg text-brand-roxo_apagado" data-aos="fade-up" data-aos-delay="200">
-            <p>Olá, eu sou <strong class="text-brand-roxo">Letícia Gomes de Carvalho, Psicanalista Clínica e Especialista em Neurociência aplicada à Performance Humana.</strong></p>
-            <p>Entendo que o bem-estar real surge da integração profunda entre os processos mentais e os fundamentos biológicos. Utilizo a terapia psicanalítica para explorar o inconsciente, enquanto a neurociência fornece a base científica para compreender como seus obstáculos diários afetam seu sistema nervoso. Através desta visão holística, irei ajudar você a identificar padrões limitantes e a construir uma vida emocionalmente equilibrada e resiliente.</p>
+        <div class="space-y-6 text-lg text-brand-roxo_apagado max-w-4xl mx-auto text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
+            <p>Sou <strong class="text-brand-roxo">Letícia Gomes de Carvalho</strong>, psicanalista e especialista em neurociência aplicada à produtividade e à performance humana. Meu trabalho é ajudar pessoas a compreenderem seus padrões inconscientes, reorganizarem a mente e removerem bloqueios que interferem em suas decisões — para que possam sustentar uma vida com mais clareza, propósito e equilíbrio real.</p>
+            <p>Autoconhecimento não é apenas reflexão — é direção sobre a própria vida. Para construir caminhos com sentido, é essencial desenvolver consciência de si, base que sustenta escolhas consistentes para uma trajetória de vida memorável.</p>
             <hr class="border-brand-roxo_apagado/30 mt-8">
         </div>
     </div>
 </section>
 
-<section id="servicos" class="py-24 bg-brand-roxo text-white">
+<section id="tratamentos" class="py-24 bg-brand-roxo text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-            <span class="font-now uppercase tracking-widest text-xs md:text-sm font-bold bg-brand-roxo text-white px-6 py-2 rounded-full border border-white">TRATAMENTO PERSONALIZADO • INDIVIDUAL • CIÊNCIA • ACOLHIMENTO</span>
-            <h2 class="text-4xl md:text-5xl font-now mt-10">Serviços Terapêuticos</h2>
+            <div class="flex justify-center">
+                <div class="font-now uppercase tracking-widest text-xs md:text-sm font-bold bg-brand-roxo text-white px-6 py-3 rounded-2xl border border-white leading-relaxed max-w-xs md:max-w-none">TRATAMENTO PERSONALIZADO • INDIVIDUAL • CIÊNCIA • ACOLHIMENTO</div>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-now mt-10">Pacotes Terapêuticos*</h2>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10 hover:bg-brand-roxo_apagado/50 transition-colors" data-aos="fade-up" data-aos-delay="0">
-                <h3 class="text-2xl font-now mb-4 font-bold text-brand-bege">Plano Individualizado</h3>
-                <p class="text-white/80 leading-relaxed">Desenvolvemos um plano terapêutico exclusivo, construído em conjunto com você. Cada jornada é única e o tratamento é ajustado continuamente para melhorar sua evolução.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-brand-roxo_apagado/30 p-8 md:p-10 rounded-3xl border border-white/10 hover:bg-brand-roxo_apagado/50 transition-colors flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                <h3 class="text-3xl font-now mb-3 font-bold text-brand-amarelo">Programa: 5C ℠ – Clareza & Direção</h3>
+                <p class="text-brand-bege font-semibold mb-6 italic text-lg">Se você continua vivendo as mesmas dores, o problema não é a vida — é o que se repete em você.</p>
+                <div class="text-white/90 leading-relaxed space-y-4 flex-grow">
+                    <p>“5C – Clareza & Direção”, estruturado em 12 sessões, é um plano exclusivo para tratar questões que afetam sua tomada de decisões e resultados.</p>
+                    <p>Se você percebe que, mesmo tentando mudar, continua repetindo os mesmos ciclos e chegando aos mesmos pontos de frustração, este programa é para você. Aqui, vamos compreender o que se repete em você, identificar os bloqueios que sustentam esse padrão e trabalhar de forma profunda para que você possa, de fato, sair desse ciclo.</p>
+                    <p class="font-bold text-brand-azul_claro mt-6">O que 5C significa:</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li>Consciência – perceber o padrão</li>
+                        <li>Compreensão – entender a origem</li>
+                        <li>Cognição – reorganizar a forma de pensar</li>
+                        <li>Comportamento – agir diferente</li>
+                        <li>Construção – sustentar a mudança na vida real</li>
+                    </ul>
+                    <p>Com este tratamento o objetivo não é apenas entender, mas consolidar a sua mudança.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-white/20">
+                    <p class="text-3xl font-bold font-now text-brand-bege">Valor: R$2.760,00</p>
+                </div>
             </div>
-            <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10 hover:bg-brand-roxo_apagado/50 transition-colors" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-2xl font-now mb-4 font-bold text-brand-bege">Cuidado Personalizado</h3>
-                <p class="text-white/80 leading-relaxed">Focamos em suas necessidades específicas através de uma abordagem sob medida, após uma minuciosa anamnese. Unimos escuta analítica e métodos neurocientíficos.</p>
+
+            <div class="bg-brand-roxo_apagado/30 p-8 md:p-10 rounded-3xl border border-white/10 hover:bg-brand-roxo_apagado/50 transition-colors flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-3xl font-now mb-3 font-bold text-brand-amarelo">Programa: O Profundo em Mim</h3>
+                <p class="text-brand-bege font-semibold mb-6 italic text-lg">Você não precisa recomeçar — precisa continuar avançando.</p>
+                <div class="text-white/90 leading-relaxed space-y-4 flex-grow">
+                    <p>“O Profundo em Mim”, estruturado em 12 sessões, é o acompanhamento terapêutico para quem já percorreu parte do caminho, mas sente a necessidade de retomar e aprofundar esse processo.</p>
+                    <p>Se seu foco é ampliar a consciência sobre si, colocar em ação suas habilidades e talentos, desenvolver percepções que ajudam a reduzir angústias e culpas existenciais, promovendo mais direção, consistência e sentido na vida, este programa é perfeito para você.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-white/20">
+                    <p class="text-3xl font-bold font-now text-brand-bege">Valor: R$2.760,00</p>
+                </div>
             </div>
-            <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10 hover:bg-brand-roxo_apagado/50 transition-colors" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-2xl font-now mb-4 font-bold text-brand-bege">Processo Colaborativo</h3>
-                <p class="text-white/80 leading-relaxed">Acreditamos que a terapia é uma parceria constante. Nosso diferencial é a adaptação total às suas demandas, garantindo um acompanhamento profissional e acolhedor.</p>
+
+            <div class="bg-brand-roxo_apagado/30 p-8 md:p-10 rounded-3xl border border-white/10 hover:bg-brand-roxo_apagado/50 transition-colors flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-3xl font-now mb-3 font-bold text-brand-amarelo">Programa: Crescer Sem Drama – Crianças e Adolescentes</h3>
+                <p class="text-brand-bege font-semibold mb-6 italic text-lg">Quando o adolescente se organiza por dentro, o comportamento se ajusta por consequência.</p>
+                <div class="text-white/90 leading-relaxed space-y-4 flex-grow">
+                    <p>“Crescer sem Drama – Crianças e Adolescentes”, estruturado em 12 sessões, é um programa de acompanhamento terapêutico voltado diretamente para crianças e adolescentes a partir dos 12 anos, que apresentam comportamentos desafiadores, insegurança, timidez ou dificuldade em lidar com suas emoções.</p>
+                    <p>O foco do trabalho é ajudar o jovem a compreender a si mesmo, desenvolver segurança emocional, organizar seus pensamentos e emoções e construir formas mais saudáveis de se posicionar no mundo.</p>
+                    <p>A família participa como suporte, sendo orientada a oferecer um ambiente mais estruturado e coerente com o desenvolvimento do adolescente, sem que isso substitua o protagonismo do processo terapêutico.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-white/20">
+                    <p class="text-3xl font-bold font-now text-brand-bege">Valor: R$2.760,00</p>
+                </div>
             </div>
-            <div class="bg-brand-roxo_apagado/30 p-8 rounded-3xl border border-white/10 hover:bg-brand-roxo_apagado/50 transition-colors" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-2xl font-now mb-4 font-bold text-brand-bege">Para Adolescentes</h3>
-                <p class="text-white/80 leading-relaxed">Oferecemos um ambiente seguro para adolescentes a partir de 12 anos. Atuamos de forma acolhedora no uso excessivo de celular, identidade e emoções em total confiança.</p>
+
+            <div class="bg-brand-roxo_apagado/30 p-8 md:p-10 rounded-3xl border border-brand-amarelo/30 hover:bg-brand-roxo_apagado/50 transition-colors flex flex-col justify-center h-full text-center" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-3xl md:text-4xl font-now mb-6 font-bold text-brand-bege">Processo Colaborativo e Cuidado Personalizado</h3>
+                <p class="text-white/90 leading-relaxed text-xl">A terapia é um processo construído em parceria. Por isso, o trabalho é conduzido de forma individualizada, com base na sua história de vida, visando compreender os padrões que se repetem e assim construir mudanças reais.</p>
             </div>
+        </div>
+
+        <div class="mt-12 p-8 border border-brand-lilas rounded-3xl bg-brand-roxo_apagado/10 text-center" data-aos="fade-up" data-aos-delay="400">
+            <p class="text-xl md:text-2xl text-white font-bold mb-3 font-now">*Cada pacote pode ser parcelado em até 12 x R$230,00 no cartão de crédito, sem juros.</p>
+            <p class="text-lg md:text-xl text-brand-azul_claro font-semibold">Pagamento à vista tem 20% de desconto - Pix ou transferência bancária: Valor: R$2.208,00.</p>
         </div>
     </div>
 </section>
 
 <section id="empresas" class="py-24 bg-brand-branco">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-now text-brand-roxo mb-16 text-center" data-aos="fade-up">Serviços para Empresas</h2>
+        <h2 class="text-3xl md:text-5xl font-now text-brand-roxo mb-16 text-center leading-snug font-bold max-w-5xl mx-auto" data-aos="fade-up">IGNORAR OS RISCOS PSICOSSOCIAIS HOJE NÃO É APENAS UMA FALHA DE GESTÃO — É UM PREJUÍZO FINANCEIRO ANUNCIADO.</h2>
+        
         <div class="flex flex-col md:flex-row items-center gap-16">
             <div class="w-full md:w-1/2 space-y-6 text-lg text-brand-roxo_apagado" data-aos="fade-right">
-                <p>Oferecemos soluções especializadas para o gerenciamento de riscos ocupacionais, garantindo que seu ambiente de trabalho atenda plenamente às exigências da Norma Regulamentadora 1 (NR1).</p>
-                <p>Conte com nossa expertise para desenvolver e implementar programas eficazes de Saúde e Segurança do Trabalho (SST), assegurando a saúde e a segurança de seus colaboradores e a conformidade legal de sua organização.</p>
-                <p>Também oferecemos serviços de atendimento e suporte terapêutico para os colaboradores de sua empresa, bem como processos seletivos para contratação e dispensa de funcionários.</p>
+                <p>Com a atualização da Norma Regulamentadora nº 1 (NR-1), empresas que não se adequarem até 26 de maio de 2026 estarão expostas a multas, ações trabalhistas e aumento significativo de custos operacionais.</p>
+                <p>Além disso, ambientes emocionalmente desorganizados geram absenteísmo, queda de produtividade, demissões, conflitos internos e decisões ineficientes — impactando diretamente o lucro.</p>
+                <p>Eu ajudo sua empresa a identificar e corrigir esses fatores antes que eles se transformem em prejuízo.</p>
+                <p>Com uma atuação baseada na exigência da lei e utilizando as bases da psicanálise e neurociência, o foco não é apenas o bem-estar — é resultado: menos afastamentos, menos conflitos, mais produtividade e maior segurança jurídica.</p>
+                <p>Mais do que cumprir uma norma, sua empresa passa a operar com mais eficiência, previsibilidade e resultados financeiros.</p>
+                <p class="font-bold text-brand-roxo mt-6">Agende uma conversa estratégica de avaliação dos riscos psicossociais e entenda como adequar sua empresa à NR-1.</p>
             </div>
             <div class="w-full md:w-1/2" data-aos="fade-left">
                 <img src="/static/img/foto_corporativa.webp" alt="Serviços para Empresas" class="rounded-3xl shadow-lg w-full object-cover aspect-[4/3]">
             </div>
+        </div>
+
+        <div class="flex justify-center mt-12 w-full" data-aos="zoom-in">
+            <a href="https://wa.me/5577981609526?text=Olá Letícia, gostaria de conversar sobre consultoria NR-1 para a minha empresa." target="_blank" class="inline-block bg-brand-roxo text-white font-now px-12 py-5 rounded-full text-xl hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow-xl">Falar com Letícia</a>
         </div>
     </div>
 </section>
 
 <section id="sobre" class="py-24 bg-brand-bege">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div class="w-full" data-aos="fade-right">
+        <div class="flex flex-col gap-16 items-center">
+            <div class="w-full md:w-1/2 lg:w-2/5" data-aos="zoom-in">
                 <img src="/static/img/leticia_olhando_cima.webp" alt="Letícia Carvalho" class="rounded-3xl shadow-lg w-full object-cover">
             </div>
             
-            <div class="w-full flex flex-col gap-12" data-aos="fade-left">
-                <div>
-                    <h2 class="text-4xl font-now text-brand-roxo mb-8 relative inline-block">Minha história
-                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-lilas"></span>
-                    </h2>
-                    <div class="space-y-6 text-lg text-brand-roxo_apagado">
-                        <p>Sempre fui uma pessoa naturalmente acolhedora, mas foi a minha própria jornada de dor e autoconhecimento que revelou meu verdadeiro propósito: ajudar outras pessoas a compreender e transformar seus sofrimentos.</p>
-                        <p>Hoje, como psicanalista, ofereço um espaço seguro, humano e empático, atuando como parceira na sua jornada de autoconhecimento e cura emocional.</p>
-                        <p>Minha missão é mostrar que é possível transformar a dor em crescimento e encontrar sentido mesmo nos momentos mais difíceis.</p>
-                    </div>
-                </div>
-
-                <div>
-                    <h2 class="text-4xl font-now text-brand-roxo mb-8 relative inline-block">Sobre mim
-                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-lilas"></span>
-                    </h2>
-                    <div class="space-y-6 text-lg text-brand-roxo_apagado">
-                        <p>Atuo como Psicanalista Clínica e sou proprietária da Equilibrar Psicanálise (Registro SBPT 00352025).</p>
-                        <p>Minha base acadêmica inclui a graduação em Ciências Sociais pela UMESP, formação em Psicanálise Clínica pelo Instituto Universo de Psicanálise Clínica (IUPC-SP).</p>
-                        <p>Sou pós-graduada também em Psicanálise Clínica pelo IUPC-SP e pós-graduada em Neurociências pela PUC-PR.</p>
-                        <p>Atualmente, estou me especializando em Terapia Cognitivo Comportamental, Nerociência na Prática Clínica e Hipnose Terapêutica pelo Instituto Lucas Kane.</p>
-                    </div>
+            <div class="w-full" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-now text-brand-roxo mb-10 relative inline-block text-center w-full">Sobre mim
+                    <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-brand-lilas"></span>
+                </h2>
+                <div class="space-y-6 text-lg text-brand-roxo_apagado max-w-4xl mx-auto text-center md:text-left">
+                    <p>Minha trajetória pessoal no autoconhecimento foi o ponto de partida para a construção de uma atuação clínica baseada na compreensão profunda do sofrimento psíquico.</p>
+                    <p>Hoje, como Psicanalista Clínica e especialista em Neurociência Aplicada à Produtividade e à Performance Humana, conduzo processos terapêuticos voltados à identificação e transformação de padrões inconscientes que impactam emoções, comportamentos e decisões.</p>
+                    <p>Como proprietária da Equilibrar Psicanálise, ofereço um espaço seguro, ético e estruturado, com foco em promover clareza, autonomia emocional e mudanças consistentes na forma como cada pessoa se posiciona na vida.</p>
+                    <p>Possuo graduação em Ciências Sociais pela UMESP, formação e pós-graduação em Psicanálise Clínica pelo IUPC-SP (registro nº 00352025 - SBPT) e pós-graduação em Neurociências pela PUC-PR.</p>
+                    <p>Atualmente, sigo em formação continuada em Terapia Cognitivo-Comportamental, Neurociência na Prática Clínica entre outras.</p>
                 </div>
             </div>
         </div>
 
-        <div class="mt-20 bg-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-md" data-aos="zoom-in">
-            <div class="w-full md:w-1/3">
+        <div class="mt-24 bg-white rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-12 shadow-md" data-aos="zoom-in">
+            <div class="w-full lg:w-1/3">
                 <img src="/static/img/leticia_livro.webp" alt="Livro Letícia Carvalho Por que você sempre deixa para depois" class="rounded-2xl shadow w-full">
             </div>
-            <div class="w-full md:w-2/3">
-                <h3 class="text-3xl font-now text-brand-roxo mb-4">Autora Publicada</h3>
-                <p class="text-lg mb-8 text-brand-roxo_apagado">Sou coautora do livro "Por que você sempre deixa para depois?", da editora Livro, lançado em novembro de 2025.</p>
-                <a href="https://wa.me/5577981609526?text=Olá Letícia, gostaria de adquirir o seu livro!" target="_blank" class="inline-block bg-brand-roxo text-white font-now px-8 py-3 rounded-full hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow">Adquira o livro AQUI!</a>
+            <div class="w-full lg:w-2/3">
+                <h3 class="text-3xl md:text-4xl font-now text-brand-roxo mb-6">Autora Publicada</h3>
+                <div class="space-y-5 text-lg text-brand-roxo_apagado mb-8">
+                    <p>Sou coautora do livro <em>Por que Você Sempre Deixa para Depois</em> (Editora Livro, 2025), onde assino dois capítulos que dialogam diretamente com a base do meu trabalho clínico: a repetição de padrões inconscientes.</p>
+                    <p>No capítulo 3, em <strong>“Ecos do Passado: A Prisão das Histórias Não Escolhidas”</strong>, abordo como experiências da infância continuam atuando na vida adulta, influenciando escolhas, comportamentos e mantendo ciclos de procrastinação e sofrimento.</p>
+                    <p>Já o capítulo 4, em <strong>“É doloroso, mas é o que eu conheço. E não consigo sair disso.”</strong>, aprofundo a compreensão sobre por que permanecemos em situações que nos fazem sofrer, mesmo quando sabemos que não nos fazem bem — analisando esse processo sob a ótica da psicanálise e da neurociência.</p>
+                    <p>O livro vai muito além dos meus capítulos. Ele reúne histórias reais, reflexões e experiências de outras mulheres que enriquecem ainda mais a leitura. Vale a pena conhecer cada uma dessas perspectivas.</p>
+                </div>
+                <a href="https://wa.me/5577981609526?text=Olá Letícia, gostaria de adquirir o seu livro!" target="_blank" class="inline-block bg-brand-roxo text-white font-now px-8 py-4 rounded-full text-lg hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow">Adquira o livro AQUI!</a>
             </div>
         </div>
     </div>
 </section>
 
 <section id="contato" class="py-24 bg-brand-branco">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-        <div class="bg-brand-bege p-10 md:p-14 rounded-3xl shadow-xl border border-brand-bege/50">
-            <h2 class="text-4xl font-now text-brand-roxo mb-4 text-center">Como posso te ajudar?</h2>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-now text-brand-roxo mb-16 text-center">Como posso te ajudar?</h2>
             
-            <div class="flex flex-wrap justify-center gap-8 mt-6 mb-10">
-                <a href="https://www.doctoralia.com.br/z/U4Phnv" target="_blank" class="flex flex-col items-center gap-3 text-brand-roxo hover:text-brand-lilas transition-colors group">
-                    <div class="w-14 h-14 rounded-full bg-brand-roxo group-hover:bg-brand-lilas transition-colors flex items-center justify-center text-white shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm1.5 5v2.5H12v1H9.5V11h-1V8.5H6v-1h2.5V5h1Z"/>
-                        </svg>
-                    </div>
-                    <span class="font-now font-bold">Doctoralia</span>
-                </a>
-                
-                <a href="https://www.instagram.com/equilibrarpsicanalise/" target="_blank" class="flex flex-col items-center gap-3 text-brand-roxo hover:text-brand-lilas transition-colors group">
-                    <div class="w-14 h-14 rounded-full bg-brand-roxo group-hover:bg-brand-lilas transition-colors flex items-center justify-center text-white shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                        </svg>
-                    </div>
-                    <span class="font-now font-bold">Instagram</span>
-                </a>
-                
-                <a href="https://www.linkedin.com/in/let%C3%ADciagomesdecarvalho/" target="_blank" class="flex flex-col items-center gap-3 text-brand-roxo hover:text-brand-lilas transition-colors group">
-                    <div class="w-14 h-14 rounded-full bg-brand-roxo group-hover:bg-brand-lilas transition-colors flex items-center justify-center text-white shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                        </svg>
-                    </div>
-                    <span class="font-now font-bold">LinkedIn</span>
-                </a>
-            </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            
+            <div class="lg:col-span-2 bg-brand-bege p-10 md:p-14 rounded-3xl shadow-xl border border-brand-bege/50">
+                <div class="flex flex-wrap justify-center gap-8 mt-6 mb-10">
+                    <a href="https://www.doctoralia.com.br/z/U4Phnv" target="_blank" class="flex flex-col items-center gap-3 text-brand-roxo hover:text-brand-lilas transition-colors group">
+                        <div class="w-14 h-14 rounded-full bg-brand-roxo group-hover:bg-brand-lilas transition-colors flex items-center justify-center text-white shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm1.5 5v2.5H12v1H9.5V11h-1V8.5H6v-1h2.5V5h1Z"/>
+                            </svg>
+                        </div>
+                        <span class="font-now font-bold">Doctoralia</span>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/equilibrarpsicanalise/" target="_blank" class="flex flex-col items-center gap-3 text-brand-roxo hover:text-brand-lilas transition-colors group">
+                        <div class="w-14 h-14 rounded-full bg-brand-roxo group-hover:bg-brand-lilas transition-colors flex items-center justify-center text-white shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917.917 0 0 0-1.417.923A3.927.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </div>
+                        <span class="font-now font-bold">Instagram</span>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/let%C3%ADciagomesdecarvalho/" target="_blank" class="flex flex-col items-center gap-3 text-brand-roxo hover:text-brand-lilas transition-colors group">
+                        <div class="w-14 h-14 rounded-full bg-brand-roxo group-hover:bg-brand-lilas transition-colors flex items-center justify-center text-white shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                            </svg>
+                        </div>
+                        <span class="font-now font-bold">LinkedIn</span>
+                    </a>
+                </div>
 
-            <p class="text-center mb-10 text-lg text-brand-roxo_apagado">Preencha o formulário abaixo e entraremos em contato.</p>
+                <p class="text-center mb-10 text-lg text-brand-roxo_apagado">Preencha o formulário abaixo e entraremos em contato.</p>
+                
+                <form id="contactForm" class="space-y-6" novalidate>
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-brand-roxo font-now">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-brand-roxo font-now">E-mail</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label for="telefone" class="block text-sm font-medium text-brand-roxo font-now">Telefone / WhatsApp</label>
+                            <input type="tel" id="telefone" name="telefone" required maxlength="15" placeholder="(11) 99999-9999" class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="mensagem" class="block text-sm font-medium text-brand-roxo font-now">Sua Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors resize-none"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-brand-roxo text-white font-now px-8 py-4 rounded-full text-lg hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow-md">Enviar Mensagem</button>
+                    </div>
+                    <div id="formResponse" class="hidden mt-6 text-center font-now p-4 rounded-xl border"></div>
+                </form>
+            </div>
             
-            <form id="contactForm" class="space-y-6" novalidate>
-                <div>
-                    <label for="nome" class="block text-sm font-medium text-brand-roxo font-now">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
+            <div class="lg:col-span-1 bg-brand-roxo text-white p-10 md:p-12 rounded-3xl shadow-xl flex flex-col justify-center h-full">
+                <h3 class="text-3xl font-now mb-6 text-brand-amarelo font-bold">Aviso Importante</h3>
+                <div class="space-y-6 text-lg text-white/90">
+                    <p>Não trabalho com sessões “avulsas”, porque mudanças profundas exigem continuidade e método.</p>
+                    <p>Encontros pontuais tendem a gerar alívio momentâneo, mas não sustentam transformações consistentes. Por isso, o trabalho é estruturado em um programa de 12 sessões, garantindo acompanhamento progressivo e comprometido.</p>
+                    <p>Para viabilizar o processo de forma organizada, o programa pode ser realizado com condição diferenciada no pagamento à vista ou parcelado no cartão de crédito, sem juros, garantindo a continuidade do acompanhamento.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-brand-roxo font-now">E-mail</label>
-                        <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
-                    </div>
-                    <div>
-                        <label for="telefone" class="block text-sm font-medium text-brand-roxo font-now">Telefone / WhatsApp</label>
-                        <input type="tel" id="telefone" name="telefone" required maxlength="15" placeholder="(11) 99999-9999" class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors">
-                    </div>
-                </div>
-                <div>
-                    <label for="mensagem" class="block text-sm font-medium text-brand-roxo font-now">Sua Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" required class="mt-1 block w-full rounded-xl border-white shadow-sm focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-50 p-4 bg-white border outline-none transition-colors resize-none"></textarea>
-                </div>
-                <div class="pt-4">
-                    <button type="submit" class="w-full bg-brand-roxo text-white font-now px-8 py-4 rounded-full text-lg hover:bg-brand-lilas hover:text-white transition-colors duration-300 shadow-md">Enviar Mensagem</button>
-                </div>
-                <div id="formResponse" class="hidden mt-6 text-center font-now p-4 rounded-xl border"></div>
-            </form>
+            </div>
+            
         </div>
     </div>
 </section>
