@@ -14,16 +14,204 @@
     --color-roxo-apagado: #775C97;
     --color-roxo: #4D3166;
     --color-lilas: #A38DC4;
+    --color-lilas-claro: #C9B8DC;
     --color-azul-claro: #CEDFE9;
-    --color-bg-bege: #F4EBE1; 
+    --color-bege: #F4EBE1;
+}
+
+html, body {
+    font-family: 'Lora', serif;
+    color: var(--color-roxo);
+    min-height: 100%;
 }
 
 body {
-    font-family: 'Lora', serif;
-    background-color: var(--color-bg-bege);
-    color: var(--color-roxo);
+    background-color: var(--color-bege);
+    background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6, .font-now {
     font-family: 'Now', sans-serif;
+}
+
+/* =========================================================================
+   Variante 1 — Acolhimento (calor terapêutico)
+   Degradê suave: bege claro → lilás claro → lilás
+   ========================================================================= */
+.theme-acolhimento {
+    background: linear-gradient(180deg,
+        #FBF6EF 0%,
+        #F4EBE1 12%,
+        #EFE2DE 28%,
+        #E0D0DD 50%,
+        #C9B8DC 75%,
+        #A38DC4 100%
+    );
+    background-attachment: fixed;
+}
+.theme-acolhimento .footer-area {
+    background-color: rgba(163, 141, 196, 0.55);
+    color: var(--color-roxo);
+    backdrop-filter: blur(6px);
+}
+.theme-acolhimento .accent-serif {
+    font-family: 'Lora', serif;
+}
+.theme-acolhimento .soft-card {
+    background-color: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================================================
+   Variante 2 — Profundidade (psicanalítico imersivo)
+   Degradê marcado: bege → lilás → roxo escuro completo
+   ========================================================================= */
+.theme-profundidade {
+    background: linear-gradient(180deg,
+        #F4EBE1 0%,
+        #E8DCEA 18%,
+        #C9B8DC 38%,
+        #A38DC4 58%,
+        #775C97 78%,
+        #4D3166 100%
+    );
+    background-attachment: fixed;
+}
+.theme-profundidade .footer-area {
+    background-color: rgba(35, 19, 50, 0.65);
+    color: #F4EBE1;
+    backdrop-filter: blur(8px);
+}
+.theme-profundidade .footer-area .footer-text-muted {
+    color: rgba(244, 235, 225, 0.78);
+}
+.theme-profundidade .deep-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+.theme-profundidade .reading-card {
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.theme-profundidade .highlight-yellow {
+    background: linear-gradient(180deg, transparent 65%, rgba(254, 242, 23, 0.85) 65%);
+    padding: 0 0.15em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* =========================================================================
+   Variante 3 — Clínico Moderno (estruturado, frio)
+   Degradê: azul claro → lilás → roxo apagado
+   ========================================================================= */
+.theme-clinico {
+    background: linear-gradient(180deg,
+        #FFFFFF 0%,
+        #EAF1F5 14%,
+        #CEDFE9 32%,
+        #C9B8DC 58%,
+        #A38DC4 80%,
+        #775C97 100%
+    );
+    background-attachment: fixed;
+}
+.theme-clinico .footer-area {
+    background-color: rgba(77, 49, 102, 0.85);
+    color: #FFFFFF;
+}
+.theme-clinico .grid-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(119, 92, 151, 0.18);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(77, 49, 102, 0.06);
+}
+.theme-clinico .section-rule {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-lilas), transparent);
+    margin: 0 auto;
+    max-width: 8rem;
+}
+
+/* =========================================================================
+   Tema padrão (página-índice)
+   ========================================================================= */
+.theme-default {
+    background: linear-gradient(180deg, #F4EBE1 0%, #C9B8DC 60%, #A38DC4 100%);
+    background-attachment: fixed;
+}
+.theme-default .footer-area {
+    background-color: rgba(163, 141, 196, 0.6);
+    color: var(--color-roxo);
+}
+
+/* =========================================================================
+   Cartão de programa (compartilhado, mas aparência via tema)
+   ========================================================================= */
+.programa-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.programa-card .programa-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Bloco de preço — base */
+.price-block {
+    padding: 1.25rem 1.5rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(163, 141, 196, 0.25);
+}
+.theme-profundidade .price-block {
+    background-color: rgba(244, 235, 225, 0.95);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.theme-clinico .price-block {
+    background-color: #FFFFFF;
+    border-color: rgba(119, 92, 151, 0.2);
+    border-radius: 0.5rem;
+}
+
+/* =========================================================================
+   Acessibilidade — reduce motion
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Mobile: degradês com background-attachment: scroll para evitar bug iOS */
+@media (max-width: 768px) {
+    .theme-acolhimento,
+    .theme-profundidade,
+    .theme-clinico,
+    .theme-default,
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* Hero — citação tese com Lora itálico (usado na variante acolhimento) */
+.tese-quote {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+/* Aspect ratio quadrado para foto profissional em variantes 1 e 3 */
+.foto-profissional-circ {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 9999px;
 }

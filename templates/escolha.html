@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrar Psicanálise — Escolha o estilo do site</title>
+    <meta name="description" content="Três propostas visuais para o site da Equilibrar Psicanálise Clínica. Visualize cada uma e escolha a que mais combina.">
+    <link rel="icon" type="image/png" href="/static/img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brand: {
+                amarelo: '#FEF217', roxo_apagado: '#775C97', roxo: '#4D3166',
+                lilas: '#A38DC4', lilas_claro: '#C9B8DC', azul_claro: '#CEDFE9',
+                bege: '#F4EBE1', branco: '#FFFFFF'
+            }}}}}
+        }
+    </script>
+    <style>
+        .preview-card {
+            border-radius: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 20px 50px -10px rgba(77, 49, 102, 0.25);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+        .preview-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px -10px rgba(77, 49, 102, 0.35);
+        }
+        .preview-mockup {
+            height: 280px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .mockup-acolhimento {
+            background: linear-gradient(180deg, #FBF6EF 0%, #EFE2DE 40%, #C9B8DC 80%, #A38DC4 100%);
+        }
+        .mockup-profundidade {
+            background: linear-gradient(180deg, #F4EBE1 0%, #C9B8DC 35%, #775C97 75%, #4D3166 100%);
+        }
+        .mockup-clinico {
+            background: linear-gradient(180deg, #FFFFFF 0%, #CEDFE9 40%, #A38DC4 80%, #775C97 100%);
+        }
+        .mockup-text {
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+        .mockup-acolhimento .mockup-text { color: #4D3166; font-family: 'Lora', serif; font-style: italic; }
+        .mockup-profundidade .mockup-text { color: #4D3166; font-family: 'Now', sans-serif; font-weight: 700; }
+        .mockup-clinico .mockup-text { color: #4D3166; font-family: 'Now', sans-serif; }
+        .mockup-text small {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.65rem;
+            font-family: 'Now', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            opacity: 0.7;
+            margin-bottom: 0.75rem;
+        }
+        .mockup-circle {
+            width: 80px; height: 80px; border-radius: 9999px;
+            background: rgba(255,255,255,0.45);
+            border: 3px solid rgba(255,255,255,0.6);
+            margin: 1.25rem auto 0;
+        }
+        .mockup-rect {
+            width: 100px; height: 130px; border-radius: 0.5rem;
+            background: rgba(255,255,255,0.5);
+            border: 1px solid rgba(255,255,255,0.6);
+            margin: 1rem auto 0;
+        }
+        .mockup-bar {
+            width: 60%;
+            height: 6px;
+            border-radius: 999px;
+            margin: 0.4rem auto;
+            background: rgba(77, 49, 102, 0.25);
+        }
+    </style>
+</head>
+<body class="theme-default antialiased min-h-screen flex flex-col">
+
+<header class="py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <img src="/static/img/logo_com_nome_psicanalise.webp" alt="Equilibrar Psicanálise Clínica" class="h-12 md:h-14 w-auto object-contain">
+        <span class="font-now uppercase tracking-wider text-xs text-brand-roxo_apagado hidden md:inline">Prévia interna · escolha do estilo</span>
+    </div>
+</header>
+
+<main class="flex-grow py-10 md:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+            <p class="font-now uppercase tracking-[0.3em] text-xs text-brand-roxo_apagado mb-5">Para Letícia</p>
+            <h1 class="font-now font-bold text-3xl md:text-5xl text-brand-roxo leading-tight mb-6">
+                Escolha o estilo do site
+            </h1>
+            <p class="font-lora text-lg md:text-xl text-brand-roxo_apagado max-w-2xl mx-auto leading-relaxed">
+                Preparei <strong>3 propostas visuais</strong> com o mesmo conteúdo. Cada uma tem uma personalidade diferente.
+                Visualize cada uma e me diga qual mais combina com a sua marca.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+            <!-- VARIANTE 1 -->
+            <article class="preview-card bg-white/85 backdrop-blur flex flex-col">
+                <div class="preview-mockup mockup-acolhimento">
+                    <div class="mockup-text">
+                        <small>Acolhimento</small>
+                        <p class="text-lg leading-snug">"Você não sofre pelo que vive…"</p>
+                        <div class="mockup-circle"></div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-7 flex-grow flex flex-col">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="inline-block w-2 h-2 rounded-full bg-brand-lilas"></span>
+                        <span class="font-now uppercase tracking-wider text-xs text-brand-roxo_apagado">Variante 1</span>
+                    </div>
+                    <h2 class="font-now font-bold text-2xl text-brand-roxo mb-2">Acolhimento</h2>
+                    <p class="font-lora italic text-brand-roxo_apagado mb-4">Calor terapêutico</p>
+                    <ul class="text-sm text-brand-roxo_apagado space-y-1.5 mb-6 leading-relaxed">
+                        <li>• Tipografia serifada (Lora) protagonista</li>
+                        <li>• Foto da Letícia em destaque circular</li>
+                        <li>• Cantos muito arredondados, luz suave</li>
+                        <li>• Degradê bege → lilás (sem chegar ao escuro)</li>
+                    </ul>
+                    <div class="flex-grow"></div>
+                    <a href="/acolhimento"
+                       class="inline-flex items-center justify-center gap-2 w-full bg-brand-lilas text-brand-roxo font-now font-semibold px-6 py-3 rounded-full
+                              hover:bg-brand-roxo hover:text-white transition-colors duration-300 shadow-md">
+                        Visualizar
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- VARIANTE 2 -->
+            <article class="preview-card bg-white/85 backdrop-blur flex flex-col">
+                <div class="preview-mockup mockup-profundidade">
+                    <div class="mockup-text">
+                        <small>Profundidade</small>
+                        <p class="text-2xl leading-tight">VOCÊ NÃO<br>SOFRE…</p>
+                        <div class="mockup-bar"></div>
+                        <div class="mockup-bar" style="width:40%"></div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-7 flex-grow flex flex-col">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="inline-block w-2 h-2 rounded-full bg-brand-roxo"></span>
+                        <span class="font-now uppercase tracking-wider text-xs text-brand-roxo_apagado">Variante 2</span>
+                    </div>
+                    <h2 class="font-now font-bold text-2xl text-brand-roxo mb-2">Profundidade</h2>
+                    <p class="font-lora italic text-brand-roxo_apagado mb-4">Psicanalítico imersivo</p>
+                    <ul class="text-sm text-brand-roxo_apagado space-y-1.5 mb-6 leading-relaxed">
+                        <li>• Tipografia sans-serif (Now) em escala dramática</li>
+                        <li>• Programas como cenas verticais imersivas</li>
+                        <li>• Degradê completo: bege → roxo escuro no final</li>
+                        <li>• Tom denso e contemplativo</li>
+                    </ul>
+                    <div class="flex-grow"></div>
+                    <a href="/profundidade"
+                       class="inline-flex items-center justify-center gap-2 w-full bg-brand-lilas text-brand-roxo font-now font-semibold px-6 py-3 rounded-full
+                              hover:bg-brand-roxo hover:text-white transition-colors duration-300 shadow-md">
+                        Visualizar
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- VARIANTE 3 -->
+            <article class="preview-card bg-white/85 backdrop-blur flex flex-col">
+                <div class="preview-mockup mockup-clinico">
+                    <div class="mockup-text">
+                        <small>Clínico Moderno</small>
+                        <p class="text-base font-semibold">Compreender para transformar</p>
+                        <div class="mockup-rect"></div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-7 flex-grow flex flex-col">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="inline-block w-2 h-2 rounded-full bg-brand-azul_claro"></span>
+                        <span class="font-now uppercase tracking-wider text-xs text-brand-roxo_apagado">Variante 3</span>
+                    </div>
+                    <h2 class="font-now font-bold text-2xl text-brand-roxo mb-2">Clínico Moderno</h2>
+                    <p class="font-lora italic text-brand-roxo_apagado mb-4">Estruturado e profissional</p>
+                    <ul class="text-sm text-brand-roxo_apagado space-y-1.5 mb-6 leading-relaxed">
+                        <li>• Layout em grade rígida, alinhamento estrito</li>
+                        <li>• Cards uniformes com hierarquia clara</li>
+                        <li>• Degradê azul claro → lilás → roxo apagado</li>
+                        <li>• Sensação institucional/científica</li>
+                    </ul>
+                    <div class="flex-grow"></div>
+                    <a href="/clinico"
+                       class="inline-flex items-center justify-center gap-2 w-full bg-brand-lilas text-brand-roxo font-now font-semibold px-6 py-3 rounded-full
+                              hover:bg-brand-roxo hover:text-white transition-colors duration-300 shadow-md">
+                        Visualizar
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="mt-14 md:mt-20 max-w-3xl mx-auto bg-white/65 backdrop-blur rounded-2xl p-6 md:p-8 text-center shadow-md">
+            <p class="font-now uppercase tracking-wider text-xs text-brand-roxo_apagado mb-3">Importante</p>
+            <p class="text-base text-brand-roxo_apagado leading-relaxed">
+                As três variantes têm o <strong>mesmo conteúdo</strong> (textos, programas, valores e fotos).
+                A diferença é apenas visual — tipografia, cores do degradê, layout e tom geral.
+                Após você escolher, refinaremos a vencedora e geraremos a documentação final.
+            </p>
+        </div>
+    </div>
+</main>
+
+<footer class="py-6 px-4 text-center font-now text-xs text-brand-roxo_apagado">
+    Equilibrar Psicanálise Clínica · Prévia de propostas visuais · {{ current_year|default(2026) }}
+</footer>
+
+</body>
+</html>

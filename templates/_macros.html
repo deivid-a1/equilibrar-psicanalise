@@ -1,0 +1,66 @@
+{# Macros reutilizáveis pelas 3 variantes do site. #}
+
+{# Seção imagem + texto em paralelo (responsivo). #}
+{% macro section_image_text(img_src, alt, eyebrow, title, body_html, reverse=False, id='', section_classes='py-20 md:py-28', img_classes='rounded-3xl shadow-xl', title_classes='text-3xl md:text-4xl font-now text-brand-roxo', text_classes='text-lg text-brand-roxo_apagado leading-relaxed') %}
+<section {% if id %}id="{{ id }}"{% endif %} class="{{ section_classes }}">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col {{ 'md:flex-row-reverse' if reverse else 'md:flex-row' }} items-center gap-10 md:gap-16">
+      <div class="w-full md:w-1/2" data-aos="{{ 'fade-left' if reverse else 'fade-right' }}">
+        <img src="{{ img_src }}" alt="{{ alt }}" class="w-full object-cover {{ img_classes }}" loading="lazy">
+      </div>
+      <div class="w-full md:w-1/2 space-y-5" data-aos="{{ 'fade-right' if reverse else 'fade-left' }}">
+        {% if eyebrow %}<p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado">{{ eyebrow }}</p>{% endif %}
+        <h2 class="{{ title_classes }}">{{ title }}</h2>
+        <div class="{{ text_classes }} space-y-4">{{ body_html|safe }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{# Botão CTA padronizado: claro em repouso, escurece no hover. #}
+{% macro cta_button(label, href, extra_classes='', target_blank=False) %}
+<a href="{{ href }}"{% if target_blank %} target="_blank" rel="noopener"{% endif %}
+   class="inline-block bg-brand-lilas text-brand-roxo font-now font-semibold px-10 py-4 rounded-full text-lg
+          hover:bg-brand-roxo hover:text-white
+          transition-all duration-300 shadow-lg hover:shadow-xl
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-roxo focus-visible:ring-offset-2 {{ extra_classes }}">
+  {{ label }}
+</a>
+{% endmacro %}
+
+{# Bloco de preço padronizado: valor cheio riscado, à vista em destaque, parcelado e selo de economia. #}
+{% macro price_block(preco, container_classes='', highlight_color='text-brand-roxo') %}
+<div class="price-block {{ container_classes }}">
+  <p class="text-base text-brand-roxo_apagado/70">
+    De <span class="line-through">{{ preco.valor_cheio }}</span>
+  </p>
+  <p class="text-4xl md:text-5xl font-now font-bold {{ highlight_color }} mt-1">
+    {{ preco.valor_avista }}
+    <span class="text-base font-normal align-middle">à vista</span>
+  </p>
+  <p class="text-sm text-brand-roxo_apagado mt-1">no {{ preco.forma_avista }}</p>
+  <hr class="my-4 border-brand-lilas/40">
+  <p class="text-base text-brand-roxo">
+    ou <strong>{{ preco.parcelado }}</strong> {{ preco.forma_parcelado }}
+  </p>
+  <span class="inline-flex items-center gap-2 mt-4 bg-brand-amarelo text-brand-roxo font-bold px-4 py-1.5 rounded-full text-sm shadow-sm">
+    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+      <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm3.707 6.707-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 1 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414Z"/>
+    </svg>
+    Você economiza {{ preco.economia }}
+  </span>
+</div>
+{% endmacro %}
+
+{# Lista textual dos passos de um programa (acessibilidade WCAG 1.1.1 — equivalente textual ao infográfico). #}
+{% macro programa_passos(passos, color_class='text-brand-roxo') %}
+<ul class="space-y-3 mt-4">
+  {% for nome, desc in passos %}
+  <li class="flex gap-3">
+    <span class="flex-shrink-0 inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-lilas {{ color_class }} font-bold text-sm">{{ loop.index }}</span>
+    <span class="leading-snug"><strong class="{{ color_class }}">{{ nome }}</strong> — {{ desc }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro %}

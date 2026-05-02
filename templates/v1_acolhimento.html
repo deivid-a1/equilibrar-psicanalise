@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% from "_macros.html" import section_image_text, cta_button, price_block, programa_passos %}
+
+{% block title %}Equilibrar Psicanálise — Acolhimento{% endblock %}
+{% block body_class %}theme-acolhimento{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="py-20 md:py-28 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+            <div class="w-full md:w-3/5 order-2 md:order-1" data-aos="fade-right">
+                <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-6">{{ hero.eyebrow }}</p>
+                <h1 class="tese-quote text-3xl md:text-5xl lg:text-6xl text-brand-roxo mb-8">
+                    {{ hero.headline }}
+                </h1>
+                <p class="text-lg md:text-xl text-brand-roxo_apagado leading-relaxed mb-10 max-w-2xl">
+                    {{ hero.subheadline }}
+                </p>
+                {{ cta_button(hero.cta_label, hero.cta_href) }}
+            </div>
+            <div class="w-full md:w-2/5 order-1 md:order-2 flex justify-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-brand-lilas/30 rounded-[2.5rem] blur-2xl"></div>
+                    <img src="{{ hero.image }}" alt="{{ hero.image_alt }}"
+                         class="relative w-64 md:w-80 lg:w-96 object-cover rounded-[2rem] shadow-2xl border-4 border-white/60">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESE CLÍNICA (faixa em destaque) -->
+<section class="py-20 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-8">Tese clínica</p>
+        <p class="tese-quote text-3xl md:text-5xl text-brand-roxo leading-snug mb-10">
+            "{{ tese.frase }}"
+        </p>
+        <p class="text-lg md:text-xl text-brand-roxo_apagado leading-relaxed max-w-3xl mx-auto">
+            {{ tese.explicacao }}
+        </p>
+    </div>
+</section>
+
+<!-- ABORDAGEM -->
+<section id="abordagem" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div class="w-full md:w-1/2" data-aos="fade-right">
+                <button type="button" data-lightbox data-lightbox-caption="{{ abordagem.image_alt }}" class="block w-full group focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-roxo rounded-[2rem]" aria-label="Ampliar imagem: {{ abordagem.image_alt }}">
+                    <img src="{{ abordagem.image }}" alt="{{ abordagem.image_alt }}"
+                         class="w-full object-contain rounded-[2rem] shadow-xl bg-white/40 cursor-zoom-in transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy">
+                </button>
+            </div>
+            <div class="w-full md:w-1/2 space-y-6" data-aos="fade-left">
+                <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado">{{ abordagem.eyebrow }}</p>
+                <h2 class="tese-quote text-3xl md:text-4xl lg:text-5xl text-brand-roxo">{{ abordagem.title }}</h2>
+                <div class="text-lg text-brand-roxo_apagado leading-relaxed space-y-4">{{ abordagem.body_html|safe }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMO FUNCIONA + POR QUE NÃO AVULSAS -->
+<section class="py-20 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14" data-aos="fade-up">
+            <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-4">O processo</p>
+            <h2 class="tese-quote text-3xl md:text-4xl text-brand-roxo">{{ como_funciona.title }}</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            {% for item in como_funciona.itens %}
+            <div class="soft-card p-8 rounded-[2rem] shadow-lg" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+                <h3 class="font-now text-xl text-brand-roxo mb-3 font-bold">{{ item.title }}</h3>
+                <p class="text-brand-roxo_apagado leading-relaxed">{{ item.body }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="soft-card p-8 md:p-10 rounded-[2rem] shadow-lg" data-aos="fade-up">
+            <h3 class="font-now text-xl text-brand-roxo mb-4 font-bold">{{ por_que_nao_avulsas.title }}</h3>
+            <div class="text-brand-roxo_apagado leading-relaxed space-y-3">{{ por_que_nao_avulsas.body_html|safe }}</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAMAS TERAPÊUTICOS -->
+<section id="programas" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14" data-aos="fade-up">
+            <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-4">Programas terapêuticos</p>
+            <h2 class="tese-quote text-3xl md:text-5xl text-brand-roxo mb-4">Compreender para transformar</h2>
+            <p class="text-lg text-brand-roxo_apagado max-w-2xl mx-auto">Três programas estruturados em 12 sessões para sustentar mudanças reais.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {% for programa in programas %}
+            <article class="programa-card soft-card rounded-[2rem] p-6 md:p-8 shadow-xl" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+                <button type="button" data-lightbox data-lightbox-caption="{{ programa.nome }} — {{ programa.subtitulo }}" class="bg-white/60 rounded-2xl mb-6 p-3 flex items-center justify-center w-full group focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-roxo relative" aria-label="Ampliar infográfico do {{ programa.nome }}">
+                    <img src="{{ programa.image }}" alt="Infográfico do {{ programa.nome }}: {{ programa.subtitulo }}"
+                         class="programa-img rounded-xl cursor-zoom-in transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy">
+                    <span class="absolute bottom-4 right-4 bg-brand-roxo/90 text-white text-xs font-now uppercase tracking-wider px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 shadow-lg pointer-events-none">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.2-5.2m2.2-5.3a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zM10.5 7.5v6m-3-3h6"/></svg>
+                        Ampliar
+                    </span>
+                </button>
+                <h3 class="font-now text-2xl md:text-3xl font-bold text-brand-roxo mb-1">{{ programa.nome }}</h3>
+                <p class="tese-quote text-lg text-brand-roxo_apagado mb-4">{{ programa.subtitulo }}</p>
+                <p class="text-brand-roxo italic mb-4 leading-snug">"{{ programa.slogan }}"</p>
+                <p class="text-brand-roxo_apagado text-sm mb-4 leading-relaxed">{{ programa.publico }}</p>
+                <details class="mb-5 text-sm">
+                    <summary class="cursor-pointer font-now uppercase text-xs tracking-wider text-brand-roxo hover:text-brand-roxo_apagado">Ver os passos</summary>
+                    {{ programa_passos(programa.passos) }}
+                </details>
+                <div class="flex-grow"></div>
+                {{ price_block(preco) }}
+                <div class="mt-6">
+                    {{ cta_button(programa.cta_label, programa.cta_href, extra_classes='w-full text-center text-base px-6 py-3', target_blank=True) }}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- Faixa "Processo Colaborativo" — NÃO é programa -->
+        <div class="mt-12 soft-card rounded-[2rem] p-8 md:p-12 text-center max-w-4xl mx-auto" data-aos="fade-up">
+            <h3 class="font-now text-2xl md:text-3xl text-brand-roxo mb-4 font-bold">{{ processo_colaborativo.title }}</h3>
+            <p class="text-lg text-brand-roxo_apagado leading-relaxed">{{ processo_colaborativo.body }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- EMPRESAS NR-1 -->
+<section id="empresas" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="soft-card rounded-[2rem] p-8 md:p-12">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <img src="{{ empresas.image }}" alt="{{ empresas.image_alt }}"
+                         class="w-full object-cover rounded-[2rem] shadow-xl aspect-[4/3]" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6" data-aos="fade-left">
+                    <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado">Para empresas — NR-1</p>
+                    <h2 class="tese-quote text-2xl md:text-3xl text-brand-roxo leading-snug">{{ empresas.headline }}</h2>
+                    <div class="text-base md:text-lg text-brand-roxo_apagado leading-relaxed space-y-3">{{ empresas.body_html|safe }}</div>
+                    <div class="pt-2">
+                        {{ cta_button(empresas.cta_label, empresas.cta_href, target_blank=True) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIVRO -->
+<section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-10 md:gap-14">
+            <div class="w-full lg:w-1/3" data-aos="fade-right">
+                <img src="{{ livro.image }}" alt="{{ livro.image_alt }}"
+                     class="w-full object-cover rounded-[2rem] shadow-xl" loading="lazy">
+            </div>
+            <div class="w-full lg:w-2/3 space-y-5" data-aos="fade-left">
+                <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado">Livro publicado</p>
+                <h2 class="tese-quote text-3xl md:text-4xl text-brand-roxo">{{ livro.title }}</h2>
+                <div class="text-base md:text-lg text-brand-roxo_apagado leading-relaxed space-y-3">{{ livro.body_html|safe }}</div>
+                <div class="pt-2">
+                    {{ cta_button(livro.cta_label, livro.cta_href, target_blank=True) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section id="sobre" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-14">
+            <div class="w-full md:w-2/5 flex justify-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="absolute -inset-3 bg-brand-amarelo/30 rounded-[2.5rem] blur-2xl"></div>
+                    <img src="{{ sobre.image }}" alt="{{ sobre.image_alt }}"
+                         class="relative w-60 md:w-72 lg:w-80 object-cover rounded-[2rem] shadow-xl border-4 border-white/60">
+                </div>
+            </div>
+            <div class="w-full md:w-3/5 space-y-5" data-aos="fade-right">
+                <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado">Sobre</p>
+                <h2 class="tese-quote text-3xl md:text-4xl lg:text-5xl text-brand-roxo">{{ sobre.title }}</h2>
+                <div class="text-base md:text-lg text-brand-roxo_apagado leading-relaxed space-y-3">{{ sobre.body_html|safe }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CHAMADA FINAL + CONTATO -->
+<section id="contato" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14" data-aos="fade-up">
+            <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-4">Chamada final</p>
+            <h2 class="tese-quote text-3xl md:text-5xl text-brand-roxo mb-6">{{ chamada_final.title }}</h2>
+            <p class="text-lg md:text-xl text-brand-roxo_apagado max-w-3xl mx-auto leading-relaxed">{{ chamada_final.body }}</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <div class="lg:col-span-2 soft-card rounded-[2rem] p-8 md:p-12 shadow-xl">
+                <div class="flex flex-wrap justify-center gap-6 mb-8">
+                    <a href="{{ redes.doctoralia }}" target="_blank" rel="noopener" class="flex flex-col items-center gap-2 text-brand-roxo hover:text-brand-roxo_apagado transition-colors group" aria-label="Doctoralia">
+                        <span class="w-12 h-12 rounded-full bg-brand-lilas group-hover:bg-brand-roxo group-hover:text-white transition-colors flex items-center justify-center text-brand-roxo shadow">
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16" role="img" aria-hidden="true"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm1.5 5v2.5H12v1H9.5V11h-1V8.5H6v-1h2.5V5h1Z"/></svg>
+                        </span>
+                        <span class="font-now text-xs">Doctoralia</span>
+                    </a>
+                    <a href="{{ redes.instagram }}" target="_blank" rel="noopener" class="flex flex-col items-center gap-2 text-brand-roxo hover:text-brand-roxo_apagado transition-colors group" aria-label="Instagram">
+                        <span class="w-12 h-12 rounded-full bg-brand-lilas group-hover:bg-brand-roxo group-hover:text-white transition-colors flex items-center justify-center text-brand-roxo shadow">
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16" role="img" aria-hidden="true"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917.917 0 0 0-1.417.923A3.927.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+                        </span>
+                        <span class="font-now text-xs">Instagram</span>
+                    </a>
+                    <a href="{{ redes.linkedin }}" target="_blank" rel="noopener" class="flex flex-col items-center gap-2 text-brand-roxo hover:text-brand-roxo_apagado transition-colors group" aria-label="LinkedIn">
+                        <span class="w-12 h-12 rounded-full bg-brand-lilas group-hover:bg-brand-roxo group-hover:text-white transition-colors flex items-center justify-center text-brand-roxo shadow">
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16" role="img" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                        </span>
+                        <span class="font-now text-xs">LinkedIn</span>
+                    </a>
+                </div>
+
+                <p class="text-center mb-8 text-base text-brand-roxo_apagado">Preencha o formulário abaixo e entrarei em contato.</p>
+
+                {% include "_form_contato.html" %}
+            </div>
+
+            <div class="lg:col-span-1 bg-brand-roxo/95 text-white p-8 md:p-10 rounded-[2rem] shadow-xl flex flex-col justify-center">
+                <h3 class="font-now text-2xl mb-4 text-brand-amarelo font-bold">Aviso importante</h3>
+                <div class="space-y-4 text-base text-white/95 leading-relaxed">
+                    <p>O acompanhamento é feito em programas de 12 sessões, não em sessões avulsas.</p>
+                    <p>Pagamento à vista no PIX tem 20% de desconto. Cartão de crédito em 12x sem juros.</p>
+                </div>
+                <div class="mt-8">
+                    {{ cta_button(chamada_final.cta_label, chamada_final.cta_href, extra_classes='w-full text-center text-base px-4 py-3') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

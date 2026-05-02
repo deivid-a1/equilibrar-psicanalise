@@ -1,0 +1,110 @@
+{# Formulário de contato compartilhado pelas 3 variantes. POST para /contato #}
+<form id="contactForm" class="space-y-5" novalidate>
+    <div>
+        <label for="nome" class="block text-sm font-medium text-brand-roxo font-now mb-1">Nome completo</label>
+        <input type="text" id="nome" name="nome" required
+               class="block w-full rounded-xl border border-brand-lilas/30 bg-white/80 shadow-sm
+                      focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-40
+                      p-3 outline-none transition-colors">
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+            <label for="email" class="block text-sm font-medium text-brand-roxo font-now mb-1">E-mail</label>
+            <input type="email" id="email" name="email" required
+                   class="block w-full rounded-xl border border-brand-lilas/30 bg-white/80 shadow-sm
+                          focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-40
+                          p-3 outline-none transition-colors">
+        </div>
+        <div>
+            <label for="telefone" class="block text-sm font-medium text-brand-roxo font-now mb-1">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" required maxlength="15" placeholder="(11) 99999-9999"
+                   class="block w-full rounded-xl border border-brand-lilas/30 bg-white/80 shadow-sm
+                          focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-40
+                          p-3 outline-none transition-colors">
+        </div>
+    </div>
+    <div>
+        <label for="mensagem" class="block text-sm font-medium text-brand-roxo font-now mb-1">Sua mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required
+                  class="block w-full rounded-xl border border-brand-lilas/30 bg-white/80 shadow-sm
+                         focus:border-brand-roxo focus:ring focus:ring-brand-lilas focus:ring-opacity-40
+                         p-3 outline-none transition-colors resize-none"></textarea>
+    </div>
+    <div>
+        <button type="submit"
+                class="w-full bg-brand-lilas text-brand-roxo font-now font-semibold px-8 py-3.5 rounded-full text-base
+                       hover:bg-brand-roxo hover:text-white transition-colors duration-300 shadow-lg hover:shadow-xl">
+            Enviar mensagem
+        </button>
+    </div>
+    <div id="formResponse" class="hidden mt-4 text-center font-now p-3 rounded-xl border text-sm"></div>
+</form>
+
+<script>
+(function() {
+    const tel = document.getElementById('telefone');
+    if (tel) {
+        tel.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length > 2) value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            if (value.length > 9) value = `${value.slice(0, 10)}-${value.slice(10)}`;
+            e.target.value = value;
+        });
+    }
+
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const responseDiv = document.getElementById('formResponse');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneValue = form.telefone.value.replace(/\D/g, '');
+
+        responseDiv.className = 'hidden mt-4 text-center font-now p-3 rounded-xl border text-sm';
+
+        if (!emailRegex.test(form.email.value)) {
+            responseDiv.classList.remove('hidden');
+            responseDiv.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
+            responseDiv.innerText = 'Por favor, insira um endereço de e-mail válido.';
+            return;
+        }
+        if (phoneValue.length < 10 || phoneValue.length > 11) {
+            responseDiv.classList.remove('hidden');
+            responseDiv.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
+            responseDiv.innerText = 'Por favor, insira um número de telefone válido com DDD.';
+            return;
+        }
+
+        submitBtn.disabled = true;
+        const originalLabel = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Enviando...';
+        submitBtn.classList.add('opacity-70');
+
+        try {
+            const response = await fetch('/contato', { method: 'POST', body: formData });
+            const result = await response.json();
+            responseDiv.classList.remove('hidden');
+            if (response.ok) {
+                responseDiv.classList.add('bg-green-50', 'text-green-800', 'border-green-200');
+                responseDiv.innerText = result.message;
+                form.reset();
+            } else {
+                responseDiv.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
+                responseDiv.innerText = result.message;
+            }
+        } catch (err) {
+            responseDiv.classList.remove('hidden');
+            responseDiv.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
+            responseDiv.innerText = 'Falha na comunicação com o servidor. Tente pelo WhatsApp.';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalLabel;
+            submitBtn.classList.remove('opacity-70');
+        }
+    });
+})();
+</script>
