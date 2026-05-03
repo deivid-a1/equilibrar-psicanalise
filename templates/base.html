@@ -74,31 +74,33 @@
             </div>
         </div>
 
-        <div id="mobileOverlay" class="fixed inset-0 bg-black/40 z-30 hidden md:hidden transition-opacity opacity-0 duration-300"></div>
-
-        <div id="mobileSidebar" class="fixed inset-y-0 right-0 z-40 w-72 bg-brand-bege shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
-            <div class="flex justify-end p-4">
-                <button id="closeMenuBtn" class="text-brand-roxo p-2 focus:outline-none" aria-label="Fechar menu">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="px-6 pb-6 flex flex-col space-y-5 font-now text-lg">
-                {% block mobile_nav_links %}
-                <a href="#abordagem" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">ABORDAGEM</a>
-                <a href="#programas" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">PROGRAMAS</a>
-                <a href="#empresas" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">EMPRESAS</a>
-                <a href="#sobre" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">SOBRE</a>
-                <a href="#contato" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">CONTATO</a>
-                {% endblock %}
-                <a href="{{ doctoralia_url|default('https://www.doctoralia.com.br/z/U4Phnv') }}" target="_blank" rel="noopener"
-                   class="bg-brand-lilas text-brand-roxo text-center px-6 py-3 rounded-full mt-4 shadow font-bold hover:bg-brand-roxo hover:text-white transition-colors duration-300">
-                    Agende sua sessão
-                </a>
-            </div>
-        </div>
     </header>
+
+    <!-- Mobile sidebar e overlay (FORA do <header> para inset-y-0 funcionar com altura total da viewport) -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-[55] hidden md:hidden transition-opacity opacity-0 duration-300"></div>
+
+    <div id="mobileSidebar" class="fixed inset-y-0 right-0 z-[60] w-72 max-w-[85vw] bg-brand-bege shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col overflow-y-auto">
+        <div class="flex justify-end p-4">
+            <button id="closeMenuBtn" class="text-brand-roxo p-2 focus:outline-none" aria-label="Fechar menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="px-6 pb-6 flex flex-col space-y-5 font-now text-lg">
+            {% block mobile_nav_links %}
+            <a href="#abordagem" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">ABORDAGEM</a>
+            <a href="#programas" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">PROGRAMAS</a>
+            <a href="#empresas" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">EMPRESAS</a>
+            <a href="#sobre" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">SOBRE</a>
+            <a href="#contato" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">CONTATO</a>
+            {% endblock %}
+            <a href="{{ doctoralia_url|default('https://www.doctoralia.com.br/z/U4Phnv') }}" target="_blank" rel="noopener"
+               class="bg-brand-lilas text-brand-roxo text-center px-6 py-3 rounded-full mt-4 shadow font-bold hover:bg-brand-roxo hover:text-white transition-colors duration-300">
+                Agende sua sessão
+            </a>
+        </div>
+    </div>
 
     <main class="flex-grow site-main relative z-0">
         {% block content %}{% endblock %}
