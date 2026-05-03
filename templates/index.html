@@ -147,19 +147,30 @@
     </div>
 </section>
 
-<!-- EMPRESAS NR-1 -->
+<!-- SERVIÇOS PARA EMPRESAS (NR-1) -->
 <section id="empresas" class="py-20 md:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="soft-card rounded-[2rem] p-8 md:p-12">
+        <div class="text-center mb-10 md:mb-14" data-aos="fade-up">
+            <span class="inline-flex items-center gap-2 bg-brand-amarelo_suave text-brand-roxo font-now font-bold uppercase tracking-widest text-xs md:text-sm px-4 py-1.5 rounded-full border border-brand-roxo/30 shadow-sm">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v3H3V4zM3 9h14v7a1 1 0 01-1 1H4a1 1 0 01-1-1V9zm3 2v2h2v-2H6zm4 0v2h4v-2h-4z"/>
+                </svg>
+                NR-1 · Riscos psicossociais
+            </span>
+            <h2 class="tese-quote text-3xl md:text-5xl lg:text-6xl text-brand-roxo mt-5 leading-tight">
+                Serviços para empresas
+            </h2>
+        </div>
+
+        <div class="soft-card rounded-[2rem] p-8 md:p-12 border-2 border-brand-roxo/15 shadow-xl">
             <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
                 <div class="w-full md:w-1/2" data-aos="fade-right">
                     <img src="{{ empresas.image }}" alt="{{ empresas.image_alt }}"
                          class="w-full object-cover rounded-[2rem] shadow-xl aspect-[4/3]" loading="lazy">
                 </div>
                 <div class="w-full md:w-1/2 space-y-6" data-aos="fade-left">
-                    <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado">Para empresas — NR-1</p>
-                    <h2 class="tese-quote text-2xl md:text-3xl text-brand-roxo leading-snug">{{ empresas.headline }}</h2>
-                    <div class="text-base md:text-lg text-brand-roxo_apagado leading-relaxed space-y-3">{{ empresas.body_html|safe }}</div>
+                    <h3 class="tese-quote text-2xl md:text-3xl lg:text-4xl text-brand-roxo leading-snug">{{ empresas.headline }}</h3>
+                    <div class="text-lg md:text-xl text-brand-roxo_apagado leading-relaxed space-y-4">{{ empresas.body_html|safe }}</div>
                     <div class="pt-2">
                         {{ cta_button(empresas.cta_label, empresas.cta_href, target_blank=True) }}
                     </div>
