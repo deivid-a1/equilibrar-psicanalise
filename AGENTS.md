@@ -176,18 +176,23 @@ Imagens densas (infográficos) ficam dentro de um `<button data-lightbox data-li
 O header é fixo e tem **dois estados visuais**:
 
 1. **Expandido** (estado inicial, `scrollY <= 80`): logo grande e bem legível
-   - Inner: 8rem mobile / 10rem md / 12rem lg
-   - Logo: 7rem / 9rem / 11rem
+   - Inner: 7rem mobile / 8rem md / 9rem lg (112/128/144px)
+   - Logo: max-height 6.5/7.5/8.5rem · max-width 320/380/450px
 2. **Encolhido** (após rolar mais que 80px): logo enxuta, mais espaço para conteúdo
-   - Inner: 5rem mobile / 6rem md
-   - Logo: 3.5rem mobile / 4.5rem md
+   - Inner: 4.5rem mobile / 5rem md (72/80px)
+   - Logo: max-height 4/4.5rem · max-width 200/220px
 
 Implementação:
-- CSS: classes `.site-header`, `.site-header-inner`, `.site-logo` em `style.css` com `transition: height 0.35s ease`
+- CSS: classes `.site-header`, `.site-header-inner`, `.site-logo` em `style.css` com `transition: max-height 0.35s ease, max-width 0.35s ease`
 - JS: listener de scroll em `base.html` adiciona/remove `is-scrolled` no `#siteHeader`
-- `<main>` tem `padding-top` fixo correspondente ao tamanho expandido (para o conteúdo nunca ficar oculto na entrada)
+- `<main>` tem `padding-top` fixo (`.site-main { padding-top }`) correspondente ao tamanho expandido
+- A logo usa `max-width` além de `max-height` para garantir que NÃO invada o nav (a imagem é horizontal com aspect ~2.94:1)
 
-**Nunca** mexer nas classes Tailwind `h-X` da logo do header diretamente — usar as classes utilitárias `.site-logo` e os media queries em `style.css`. Se precisar redimensionar, editar `style.css` para manter a transição funcionando.
+**Nunca** mexer nas classes Tailwind `h-X` da logo do header diretamente — usar as classes utilitárias `.site-logo` e os media queries em `style.css`.
+
+**Cache-busting**: a URL da logo no template usa `?v=N` para invalidar cache do navegador quando a imagem é re-exportada. Incrementar `v` quando trocar o arquivo `logo_com_nome_psicanalise.webp`.
+
+**Imagem da logo**: a imagem foi cortada (auto-crop) para remover o whitespace transparente em volta do conteúdo. Tamanho final: 1168x397 (aspect 2.94:1). NÃO re-exportar com whitespace ou o tamanho aparente vai ficar pequeno de novo. Se precisar re-cortar, usar PIL com threshold de alpha — ver script no histórico do AGENTS.md.
 
 ### Scroll para âncoras
 - `html { scroll-padding-top: 6rem }` (7rem em md+) — corresponde ao header **encolhido**, pois o usuário só clica no menu após rolar (header já está pequeno).

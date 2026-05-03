@@ -29,45 +29,50 @@ html, body {
 /* ============================
    Header com shrink-on-scroll
    ============================ */
-/* Tamanho expandido (entrada): logo grande, header alto */
+/* Logo tem aspect-ratio ~2.94:1 (após crop dos espaços vazios).
+   A altura controla o tamanho aparente; a largura é limitada para não
+   invadir o nav e o botão CTA. */
 .site-header-inner {
-    height: 8rem;            /* 128px */
-    transition: height 0.35s ease;
-}
-.site-logo {
     height: 7rem;            /* 112px */
     transition: height 0.35s ease;
 }
+.site-logo {
+    height: calc(100% - 0.5rem);
+    max-height: 6.5rem;      /* 104px */
+    max-width: 320px;
+    transition: max-height 0.35s ease, max-width 0.35s ease;
+}
 @media (min-width: 768px) {
-    .site-header-inner { height: 10rem; }   /* 160px */
-    .site-logo { height: 9rem; }            /* 144px */
+    .site-header-inner { height: 8rem; }    /* 128px */
+    .site-logo { max-height: 7.5rem; max-width: 380px; }
 }
 @media (min-width: 1024px) {
-    .site-header-inner { height: 12rem; }   /* 192px */
-    .site-logo { height: 11rem; }           /* 176px */
+    .site-header-inner { height: 9rem; }    /* 144px */
+    .site-logo { max-height: 8.5rem; max-width: 450px; }
 }
 
 /* Tamanho encolhido (após scroll): logo enxuta */
 .site-header.is-scrolled .site-header-inner {
-    height: 5rem;            /* 80px */
+    height: 4.5rem;          /* 72px */
 }
 .site-header.is-scrolled .site-logo {
-    height: 3.5rem;          /* 56px */
+    max-height: 4rem;
+    max-width: 200px;
 }
 @media (min-width: 768px) {
-    .site-header.is-scrolled .site-header-inner { height: 6rem; }  /* 96px */
-    .site-header.is-scrolled .site-logo { height: 4.5rem; }        /* 72px */
+    .site-header.is-scrolled .site-header-inner { height: 5rem; }   /* 80px */
+    .site-header.is-scrolled .site-logo { max-height: 4.5rem; max-width: 220px; }
 }
 
-/* Padding-top do main: garantir que conteúdo NUNCA fica oculto pelo header */
+/* Padding-top do main: corresponde à altura do header expandido */
 .site-main {
-    padding-top: 8rem;       /* mobile: 128px (header expandido) */
+    padding-top: 7rem;       /* mobile: 112px */
 }
 @media (min-width: 768px) {
-    .site-main { padding-top: 10rem; }
+    .site-main { padding-top: 8rem; }
 }
 @media (min-width: 1024px) {
-    .site-main { padding-top: 12rem; }
+    .site-main { padding-top: 9rem; }
 }
 
 /* Compensa header fixo ao navegar para âncoras (usa altura do header encolhido,
