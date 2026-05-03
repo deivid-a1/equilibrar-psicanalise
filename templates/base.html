@@ -16,6 +16,7 @@
                     colors: {
                         brand: {
                             amarelo: '#FEF217',
+                            amarelo_suave: '#FBE89C',
                             roxo_apagado: '#775C97',
                             roxo: '#4D3166',
                             lilas: '#A38DC4',
@@ -37,11 +38,11 @@
 </head>
 <body class="antialiased flex flex-col min-h-screen overflow-x-hidden w-full relative {% block body_class %}theme-default{% endblock %}">
 
-    <header class="fixed w-full z-50 transition-all duration-300 {% block header_classes %}border-t-4 border-brand-roxo shadow-sm bg-brand-bege/90 backdrop-blur-md{% endblock %}">
+    <header id="siteHeader" class="site-header fixed w-full z-50 {% block header_classes %}border-t-4 border-brand-roxo shadow-sm bg-brand-bege/90 backdrop-blur-md{% endblock %}">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <div class="flex justify-between items-center h-20 md:h-24">
+            <div class="site-header-inner flex justify-between items-center">
                 <a href="/{% block home_anchor %}{% endblock %}" class="flex-shrink-0 flex items-center" aria-label="Equilibrar Psicanálise — página inicial">
-                    <img class="h-12 md:h-14 w-auto object-contain" src="/static/img/logo_com_nome_psicanalise.webp" alt="Equilibrar Psicanálise Clínica">
+                    <img class="site-logo w-auto object-contain" src="/static/img/logo_com_nome_psicanalise.webp" alt="Equilibrar Psicanálise Clínica">
                 </a>
 
                 <nav class="hidden md:flex space-x-6 lg:space-x-8 font-now text-sm lg:text-base" aria-label="Navegação principal">
@@ -99,7 +100,7 @@
         </div>
     </header>
 
-    <main class="flex-grow pt-20 md:pt-24 relative z-0">
+    <main class="flex-grow site-main relative z-0">
         {% block content %}{% endblock %}
     </main>
 
@@ -108,7 +109,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
                 <div>
-                    <img src="/static/img/logo_com_fundo_roxo.webp" alt="Equilibrar Psicanálise" class="h-20 md:h-24 mx-auto md:mx-0 object-contain">
+                    <img src="/static/img/logo_com_nome_psicanalise.webp" alt="Equilibrar Psicanálise" class="h-44 md:h-56 mx-auto md:mx-0 object-contain">
                 </div>
                 <div class="font-now text-sm space-y-2">
                     <p>© {{ current_year|default(2026) }} Equilibrar Psicanálise Clínica. Todos os direitos reservados.</p>
@@ -169,6 +170,20 @@
             if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
             if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMenu);
             mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+            // Header shrink-on-scroll: encolhe quando rolar > 80px
+            const siteHeader = document.getElementById('siteHeader');
+            if (siteHeader) {
+                const onScroll = () => {
+                    if (window.scrollY > 80) {
+                        siteHeader.classList.add('is-scrolled');
+                    } else {
+                        siteHeader.classList.remove('is-scrolled');
+                    }
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
 
             // Lightbox para ampliar infográficos dos programas
             const lightbox = document.getElementById('lightbox');

@@ -11,6 +11,7 @@
 :root {
     --color-branco: #FFFFFF;
     --color-amarelo: #FEF217;
+    --color-amarelo-suave: #FBE89C;
     --color-roxo-apagado: #775C97;
     --color-roxo: #4D3166;
     --color-lilas: #A38DC4;
@@ -23,6 +24,62 @@ html, body {
     font-family: 'Lora', serif;
     color: var(--color-roxo);
     min-height: 100%;
+}
+
+/* ============================
+   Header com shrink-on-scroll
+   ============================ */
+/* Tamanho expandido (entrada): logo grande, header alto */
+.site-header-inner {
+    height: 8rem;            /* 128px */
+    transition: height 0.35s ease;
+}
+.site-logo {
+    height: 7rem;            /* 112px */
+    transition: height 0.35s ease;
+}
+@media (min-width: 768px) {
+    .site-header-inner { height: 10rem; }   /* 160px */
+    .site-logo { height: 9rem; }            /* 144px */
+}
+@media (min-width: 1024px) {
+    .site-header-inner { height: 12rem; }   /* 192px */
+    .site-logo { height: 11rem; }           /* 176px */
+}
+
+/* Tamanho encolhido (após scroll): logo enxuta */
+.site-header.is-scrolled .site-header-inner {
+    height: 5rem;            /* 80px */
+}
+.site-header.is-scrolled .site-logo {
+    height: 3.5rem;          /* 56px */
+}
+@media (min-width: 768px) {
+    .site-header.is-scrolled .site-header-inner { height: 6rem; }  /* 96px */
+    .site-header.is-scrolled .site-logo { height: 4.5rem; }        /* 72px */
+}
+
+/* Padding-top do main: garantir que conteúdo NUNCA fica oculto pelo header */
+.site-main {
+    padding-top: 8rem;       /* mobile: 128px (header expandido) */
+}
+@media (min-width: 768px) {
+    .site-main { padding-top: 10rem; }
+}
+@media (min-width: 1024px) {
+    .site-main { padding-top: 12rem; }
+}
+
+/* Compensa header fixo ao navegar para âncoras (usa altura do header encolhido,
+   pois o usuário só clica no menu após rolar) */
+html {
+    scroll-padding-top: 6rem;
+}
+@media (min-width: 768px) {
+    html { scroll-padding-top: 7rem; }
+}
+section[id] {
+    scroll-margin-top: 6rem;
 }
 
 body {

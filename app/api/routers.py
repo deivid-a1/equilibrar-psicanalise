@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from fastapi import APIRouter, Request, Form
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from loguru import logger
 
@@ -20,43 +20,21 @@ def _base_context() -> dict:
 
 
 @router.get("/", response_class=HTMLResponse)
-async def escolha(request: Request):
-    logger.info("Página-índice (escolha de variante) acessada")
+async def home(request: Request):
+    logger.info("Página principal acessada")
     return templates.TemplateResponse(
         request=request,
-        name="escolha.html",
-        context={"current_year": datetime.now().year},
-    )
-
-
-@router.get("/acolhimento", response_class=HTMLResponse)
-async def variante_acolhimento(request: Request):
-    logger.info("Variante 'acolhimento' acessada")
-    return templates.TemplateResponse(
-        request=request,
-        name="v1_acolhimento.html",
+        name="index.html",
         context=_base_context(),
     )
 
 
-@router.get("/profundidade", response_class=HTMLResponse)
-async def variante_profundidade(request: Request):
-    logger.info("Variante 'profundidade' acessada")
-    return templates.TemplateResponse(
-        request=request,
-        name="v2_profundidade.html",
-        context=_base_context(),
-    )
-
-
-@router.get("/clinico", response_class=HTMLResponse)
-async def variante_clinico(request: Request):
-    logger.info("Variante 'clinico' acessada")
-    return templates.TemplateResponse(
-        request=request,
-        name="v3_clinico.html",
-        context=_base_context(),
-    )
+# Redirect rotas legadas das variantes antigas → /
+@router.get("/acolhimento", include_in_schema=False)
+@router.get("/profundidade", include_in_schema=False)
+@router.get("/clinico", include_in_schema=False)
+async def legacy_variants_redirect():
+    return RedirectResponse(url="/", status_code=301)
 
 
 @router.post("/contato")

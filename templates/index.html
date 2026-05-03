@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import section_image_text, cta_button, price_block, programa_passos %}
 
-{% block title %}Equilibrar Psicanálise — Acolhimento{% endblock %}
+{% block title %}Equilibrar Psicanálise Clínica | Letícia Gomes de Carvalho{% endblock %}
 {% block body_class %}theme-acolhimento{% endblock %}
 
 {% block content %}
@@ -18,6 +18,24 @@
                     {{ hero.subheadline }}
                 </p>
                 {{ cta_button(hero.cta_label, hero.cta_href) }}
+
+                <div class="mt-10 inline-flex flex-col items-start gap-3 max-w-md">
+                    <p class="text-base md:text-lg text-brand-roxo_apagado leading-snug">
+                        <strong class="text-brand-roxo">Quer me conhecer antes?</strong>
+                        A primeira conversa é gratuita.
+                    </p>
+                    <a href="{{ hero.cta_secundario_href }}" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 bg-brand-amarelo_suave text-brand-roxo font-now font-bold px-7 py-3.5 rounded-full text-base md:text-lg
+                              border border-brand-roxo/30
+                              hover:bg-brand-roxo hover:text-brand-amarelo_suave hover:border-brand-roxo
+                              transition-colors duration-300 shadow-md hover:shadow-lg
+                              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-roxo focus-visible:ring-offset-2">
+                        <svg class="w-5 h-5 text-brand-roxo_apagado" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.367 2.446c-.783.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.07 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69l1.287-3.957z"/>
+                        </svg>
+                        {{ hero.cta_secundario_label }}
+                    </a>
+                </div>
             </div>
             <div class="w-full md:w-2/5 order-1 md:order-2 flex justify-center" data-aos="fade-left">
                 <div class="relative">

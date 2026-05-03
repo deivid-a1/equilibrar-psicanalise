@@ -24,8 +24,10 @@ HERO = {
     ),
     "cta_label": "Conheça os programas terapêuticos",
     "cta_href": "#programas",
-    "image": "/static/img/foto_profissional_2.webp",
+    "image": "/static/img/foto_primeira_pagina.webp",
     "image_alt": "Letícia Gomes de Carvalho, psicanalista clínica",
+    "cta_secundario_label": "Agende uma sessão gratuita",
+    "cta_secundario_href": "https://wa.me/5577981609526?text=Ol%C3%A1%20Let%C3%ADcia%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20gratuita%20para%20conhecer%20os%20programas.",
 }
 
 APRESENTACAO = {
@@ -251,9 +253,10 @@ SOBRE = {
         "que impactam emoções, comportamentos e decisões.</p>"
         "<p>Atuo como Psicanalista Clínica e sou proprietária da Equilibrar Psicanálise — "
         "<strong>Registro SBPT 00352025</strong>.</p>"
-        "<p>Minha formação inclui graduação em Ciências Sociais pela UMESP, formação em Psicanálise "
-        "Clínica pelo IUPC-SP, pós-graduação em Neurociências pela PUC-PR e formação continuada em "
-        "Terapia Cognitivo-Comportamental, Neurociência na Prática Clínica e Hipnose Terapêutica.</p>"
+        "<p>Minha formação inclui graduação em Ciências Sociais pela UMESP, formação e especialização "
+        "em Psicanálise Clínica pelo IUPC-SP, especialização em Neurociência Aplicada: Produtividade e "
+        "Performance Humana pela PUC-PR e formação continuada em Terapia Cognitivo-Comportamental, "
+        "Neurociências na Prática Clínica entre outras.</p>"
     ),
     "image": "/static/img/foto_profissional_2.webp",
     "image_alt": "Letícia Gomes de Carvalho",
