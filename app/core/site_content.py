@@ -258,7 +258,7 @@ SOBRE = {
         "Performance Humana pela PUC-PR e formação continuada em Terapia Cognitivo-Comportamental, "
         "Neurociências na Prática Clínica entre outras.</p>"
     ),
-    "image": "/static/img/foto_profissional_2.webp",
+    "image": "/static/img/foto_sobre_mim.webp",
     "image_alt": "Letícia Gomes de Carvalho",
 }
 
