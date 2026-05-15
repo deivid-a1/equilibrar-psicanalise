@@ -16,18 +16,20 @@ def _wa(text: str) -> str:
 
 HERO = {
     "eyebrow": "Equilibrar Psicanálise Clínica",
-    "headline": "Você não sofre pelo que vive, mas pelo que não compreende em si — e repete.",
+    "headline": "Atuo unindo psicanálise e neurociência para ajudar você a romper com padrões que impedem a realização do que deseja.",
     "subheadline": (
-        "Integro a profundidade da psicanálise às evidências da neurociência para compreender "
-        "e transformar padrões que impactam a forma como cada pessoa pensa, sente e se posiciona "
-        "na vida — seja no adulto, no adolescente ou na criança."
+        "Na Equilibrar Psicanálise Clínica, a terapia é estruturada para você compreender sua "
+        "história, reconhecer seus padrões comportamentais, perceber como as emoções e os "
+        "sentimentos atuam na sua mente e no seu corpo, organizar pensamentos e construir "
+        "decisões mais seguras, coerentes e sustentáveis — seja no adulto, no adolescente ou "
+        "na criança."
     ),
     "cta_label": "Conheça os programas terapêuticos",
     "cta_href": "#programas",
     "image": "/static/img/foto_primeira_pagina.webp",
     "image_alt": "Letícia Gomes de Carvalho, psicanalista clínica",
-    "cta_secundario_label": "Agende uma sessão gratuita",
-    "cta_secundario_href": "https://wa.me/5577981609526?text=Ol%C3%A1%20Let%C3%ADcia%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20gratuita%20para%20conhecer%20os%20programas.",
+    "cta_secundario_label": "Agende uma conversa",
+    "cta_secundario_href": _wa("Olá Letícia, gostaria de agendar uma conversa para conhecer a sua proposta."),
 }
 
 APRESENTACAO = {
@@ -87,20 +89,6 @@ COMO_FUNCIONA = {
     ],
 }
 
-POR_QUE_NAO_AVULSAS = {
-    "title": "Por que não trabalho com sessões avulsas",
-    "body_html": (
-        "<p>Não trabalho com sessões isoladas porque mudanças profundas não acontecem de forma "
-        "pontual — elas exigem continuidade, estrutura e compromisso com o processo.</p>"
-        "<p>Encontros esporádicos podem gerar alívio momentâneo, mas raramente promovem "
-        "transformações consistentes. Por isso, os atendimentos são organizados em programas de "
-        "12 sessões, favorecendo um acompanhamento progressivo, profundo e comprometido.</p>"
-        "<p>Para viabilizar o processo de forma organizada, o programa pode ser realizado com "
-        "condição diferenciada no pagamento à vista ou parcelado no cartão de crédito, garantindo "
-        "a continuidade do acompanhamento.</p>"
-    ),
-}
-
 PRECO = {
     "valor_cheio": "R$ 2.760",
     "valor_avista": "R$ 2.208",
@@ -115,7 +103,7 @@ PROGRAMAS = [
         "id": "5c",
         "nome": "Programa 5C",
         "subtitulo": "Clareza & Direção",
-        "slogan": "Se você continua vivendo as mesmas dores, o problema não é a vida — é o que se repete em você.",
+        "slogan": "Se você continua vivendo as mesmas situações frustrantes, o problema não é a vida – e sim os padrões que se repetem em você.",
         "publico": (
             "Para quem sente que está repetindo ciclos, adiando decisões e vivendo com a sensação "
             "de que poderia avançar, mas não consegue."
@@ -245,18 +233,17 @@ LIVRO = {
 SOBRE = {
     "title": "Sobre mim",
     "body_html": (
-        "<p>Sempre tive uma escuta naturalmente acolhedora, mas foi a minha própria trajetória de "
-        "dor e autoconhecimento que revelou, com clareza, o meu propósito: ajudar outras pessoas a "
-        "compreenderem e transformarem seus sofrimentos.</p>"
-        "<p>Hoje, como psicanalista, ofereço um espaço seguro, ético e humanizado, conduzindo "
-        "processos terapêuticos voltados à identificação e transformação de padrões inconscientes "
-        "que impactam emoções, comportamentos e decisões.</p>"
-        "<p>Atuo como Psicanalista Clínica e sou proprietária da Equilibrar Psicanálise — "
-        "<strong>Registro SBPT 00352025</strong>.</p>"
-        "<p>Minha formação inclui graduação em Ciências Sociais pela UMESP, formação e especialização "
-        "em Psicanálise Clínica pelo IUPC-SP, especialização em Neurociência Aplicada: Produtividade e "
-        "Performance Humana pela PUC-PR e formação continuada em Terapia Cognitivo-Comportamental, "
-        "Neurociências na Prática Clínica entre outras.</p>"
+        "<p>Nasci em Brasília/DF, sou casada, extrovertida, empreendedora e amo estudar. "
+        "Ainda adolescente, percebi que gostava de ouvir as pessoas, mas foi a minha própria "
+        "trajetória de dor e autoconhecimento que revelou, com clareza, o meu propósito: "
+        "ajudar outras pessoas a terem profundo autoconhecimento.</p>"
+        "<p>Como psicanalista e proprietária da Equilibrar Psicanálise Clínica, conduzo "
+        "processos terapêuticos voltados à identificação e transformação de padrões "
+        "inconscientes que impactam emoções, comportamentos e decisões.</p>"
+        "<p>Minha base de conhecimento inclui graduação em Ciências Sociais pela UMESP, "
+        "especialização em Psicanálise Clínica pelo IUPC-SP, especialização em Neurociências "
+        "Aplicada: Produtividade e Performance Humana pela PUC-PR, formação continuada em "
+        "Terapia Cognitivo-Comportamental, Neurociência na Prática Clínica entre outras.</p>"
     ),
     "image": "/static/img/foto_sobre_mim.webp",
     "image_alt": "Letícia Gomes de Carvalho",
@@ -268,8 +255,8 @@ CHAMADA_FINAL = {
         "A terapia pode ser o espaço onde aquilo que se repete começa, finalmente, a ser "
         "compreendido e transformado."
     ),
-    "cta_label": "Iniciar meu processo terapêutico",
-    "cta_href": "#contato",
+    "cta_label": "VOLTAR AOS PROGRAMAS",
+    "cta_href": "#programas",
 }
 
 REDES = {
@@ -288,7 +275,6 @@ def get_content() -> dict:
         "tese": TESE,
         "abordagem": ABORDAGEM,
         "como_funciona": COMO_FUNCIONA,
-        "por_que_nao_avulsas": POR_QUE_NAO_AVULSAS,
         "preco": PRECO,
         "programas": PROGRAMAS,
         "processo_colaborativo": PROCESSO_COLABORATIVO,

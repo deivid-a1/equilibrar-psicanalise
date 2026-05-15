@@ -21,8 +21,7 @@
 
                 <div class="mt-10 inline-flex flex-col items-start gap-3 max-w-md">
                     <p class="text-base md:text-lg text-brand-roxo_apagado leading-snug">
-                        <strong class="text-brand-roxo">Quer me conhecer antes?</strong>
-                        A primeira conversa é gratuita.
+                        Conheça minha proposta – não tem custo.
                     </p>
                     <a href="{{ hero.cta_secundario_href }}" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2 bg-brand-amarelo_suave text-brand-roxo font-now font-bold px-7 py-3.5 rounded-full text-base md:text-lg
@@ -87,17 +86,13 @@
             <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-4">O processo</p>
             <h2 class="tese-quote text-3xl md:text-4xl text-brand-roxo">{{ como_funciona.title }}</h2>
         </div>
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="grid md:grid-cols-2 gap-8">
             {% for item in como_funciona.itens %}
             <div class="soft-card p-8 rounded-[2rem] shadow-lg" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
                 <h3 class="font-now text-xl text-brand-roxo mb-3 font-bold">{{ item.title }}</h3>
                 <p class="text-brand-roxo_apagado leading-relaxed">{{ item.body }}</p>
             </div>
             {% endfor %}
-        </div>
-        <div class="soft-card p-8 md:p-10 rounded-[2rem] shadow-lg" data-aos="fade-up">
-            <h3 class="font-now text-xl text-brand-roxo mb-4 font-bold">{{ por_que_nao_avulsas.title }}</h3>
-            <div class="text-brand-roxo_apagado leading-relaxed space-y-3">{{ por_que_nao_avulsas.body_html|safe }}</div>
         </div>
     </div>
 </section>
@@ -223,14 +218,13 @@
 <!-- CHAMADA FINAL + CONTATO -->
 <section id="contato" class="py-12 md:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14" data-aos="fade-up">
-            <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-4">Chamada final</p>
-            <h2 class="tese-quote text-3xl md:text-5xl text-brand-roxo mb-6">{{ chamada_final.title }}</h2>
-            <p class="text-lg md:text-xl text-brand-roxo_apagado max-w-3xl mx-auto leading-relaxed">{{ chamada_final.body }}</p>
-        </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             <div class="lg:col-span-2 soft-card rounded-[2rem] p-8 md:p-12 shadow-xl">
+                <div class="text-center mb-8" data-aos="fade-up">
+                    <p class="font-now uppercase tracking-widest text-xs md:text-sm text-brand-roxo_apagado mb-3">Chamada final</p>
+                    <h2 class="tese-quote text-3xl md:text-4xl text-brand-roxo mb-4">{{ chamada_final.title }}</h2>
+                    <p class="text-base md:text-lg text-brand-roxo_apagado leading-relaxed">{{ chamada_final.body }}</p>
+                </div>
                 <div class="flex flex-wrap justify-center gap-6 mb-8">
                     <a href="{{ redes.doctoralia }}" target="_blank" rel="noopener" class="flex flex-col items-center gap-2 text-brand-roxo hover:text-brand-roxo_apagado transition-colors group" aria-label="Doctoralia">
                         <span class="w-12 h-12 rounded-full bg-brand-lilas group-hover:bg-brand-roxo group-hover:text-white transition-colors flex items-center justify-center text-brand-roxo shadow">
@@ -252,16 +246,14 @@
                     </a>
                 </div>
 
-                <p class="text-center mb-8 text-base text-brand-roxo_apagado">Preencha o formulário abaixo e entrarei em contato.</p>
-
                 {% include "_form_contato.html" %}
             </div>
 
             <div class="lg:col-span-1 bg-brand-roxo/95 text-white p-8 md:p-10 rounded-[2rem] shadow-xl flex flex-col justify-center">
                 <h3 class="font-now text-2xl mb-4 text-brand-amarelo font-bold">Aviso importante</h3>
                 <div class="space-y-4 text-base text-white/95 leading-relaxed">
-                    <p>O acompanhamento é feito em programas de 12 sessões, não em sessões avulsas.</p>
-                    <p>Pagamento à vista no PIX tem 20% de desconto. Cartão de crédito em 12x sem juros.</p>
+                    <p>Não trabalho com sessões isoladas, porque transformações consistentes não acontecem de forma pontual – elas exigem continuidade, estrutura e compromisso com o processo. Por isso, o acompanhamento é feito em programas de 12 sessões, não em sessões avulsas.</p>
+                    <p>Pagamento à vista no PIX tem 20% de desconto. Cartão de crédito 12x sem juros.</p>
                 </div>
                 <div class="mt-8">
                     {{ cta_button(chamada_final.cta_label, chamada_final.cta_href, extra_classes='w-full text-center text-base px-4 py-3') }}

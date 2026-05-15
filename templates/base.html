@@ -47,19 +47,19 @@
 
                 <nav class="hidden md:flex space-x-6 lg:space-x-8 font-now text-sm lg:text-base" aria-label="Navegação principal">
                     {% block nav_links %}
+                    <a href="/" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">HOME</a>
                     <a href="#abordagem" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">ABORDAGEM</a>
                     <a href="#programas" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">PROGRAMAS</a>
                     <a href="#empresas" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">EMPRESAS</a>
                     <a href="#sobre" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">SOBRE</a>
-                    <a href="#contato" class="text-brand-roxo hover:text-brand-roxo_apagado transition-colors">CONTATO</a>
                     {% endblock %}
                 </nav>
 
                 <div class="hidden lg:flex items-center">
                     {% block header_cta %}
-                    <a href="{{ doctoralia_url|default('https://www.doctoralia.com.br/z/U4Phnv') }}" target="_blank" rel="noopener"
+                    <a href="#contato"
                        class="bg-brand-lilas text-brand-roxo px-6 py-2 rounded-full font-now font-semibold hover:bg-brand-roxo hover:text-white transition-colors duration-300 shadow whitespace-nowrap">
-                        Agende sua sessão
+                        Entre em Contato
                     </a>
                     {% endblock %}
                 </div>
@@ -89,15 +89,15 @@
         </div>
         <div class="px-6 pb-6 flex flex-col space-y-5 font-now text-lg">
             {% block mobile_nav_links %}
+            <a href="/" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">HOME</a>
             <a href="#abordagem" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">ABORDAGEM</a>
             <a href="#programas" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">PROGRAMAS</a>
             <a href="#empresas" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">EMPRESAS</a>
             <a href="#sobre" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">SOBRE</a>
-            <a href="#contato" class="mobile-link text-brand-roxo border-b border-brand-roxo/20 pb-2">CONTATO</a>
             {% endblock %}
-            <a href="{{ doctoralia_url|default('https://www.doctoralia.com.br/z/U4Phnv') }}" target="_blank" rel="noopener"
-               class="bg-brand-lilas text-brand-roxo text-center px-6 py-3 rounded-full mt-4 shadow font-bold hover:bg-brand-roxo hover:text-white transition-colors duration-300">
-                Agende sua sessão
+            <a href="#contato"
+               class="mobile-link bg-brand-lilas text-brand-roxo text-center px-6 py-3 rounded-full mt-4 shadow font-bold hover:bg-brand-roxo hover:text-white transition-colors duration-300">
+                Entre em Contato
             </a>
         </div>
     </div>
